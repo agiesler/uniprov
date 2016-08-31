@@ -1,21 +1,162 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://w3id.org/uniprov/spec/2016/08/05/ontology#"
-     xml:base="http://w3id.org/uniprov/spec/2016/08/05/ontology"
+<rdf:RDF xmlns="http://unicore.eu/ns/uniprov#"
+     xml:base="http://unicore.eu/ns/uniprov"
+     xmlns:uniprov="http://unicore.eu/ns/uniprov#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:provone="http://purl.dataone.org/provone/2015/01/15/ontology"
+     xmlns:provone="http://purl.dataone.org/provone/2015/01/15/ontology#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:prov="http://www.w3.org/ns/prov#">
-    <owl:Ontology rdf:about="http://w3id.org/uniprov/spec/2016/08/05/ontology">
+    <owl:Ontology rdf:about="http://unicore.eu/ns/uniprov#">
+        <owl:versionIRI rdf:resource="http://unicore.eu/ns/uniprov#/1.0.0"/>
         <owl:imports rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
         <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology</rdfs:seeAlso>
         <rdfs:comment>The UNICORE Provenance Ontology</rdfs:comment>
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
         <rdfs:label>UNICORE PROV Extension for Job and Scientific Workflow Provenance</rdfs:label>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#hasJobAnnotationsCollection -->
+
+    <owl:ObjectProperty rdf:about="http://unicore.eu/ns/uniprov#hasJobAnnotationsCollection">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobScript"/>
+        <rdfs:range rdf:resource="http://unicore.eu/ns/uniprov#JobAnnotationsCollection"/>
+        <rdfs:comment>Specifies that a given Program (UNICORE script) has a collection of user annotation entities.</rdfs:comment>
+        <rdfs:label>hasJobAnnotationsCollection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#batchSystemID -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#batchSystemID">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>Id of the used batch system</rdfs:comment>
+        <rdfs:label>batchSystemID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#dataMoveExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#dataMoveExecTime">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>Time of data movement</rdfs:comment>
+        <rdfs:label>dataMoveExecTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#fromProgram -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#fromProgram">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Controller"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#inQueueExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#inQueueExecTime">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>Time of job in queue</rdfs:comment>
+        <rdfs:label>inQueueExecTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#machineInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#machineInfo">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>Info of the machine where the job runs</rdfs:comment>
+        <rdfs:label>machineInfo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#stageInExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#stageInExecTime">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>Time of job stageOut operations</rdfs:comment>
+        <rdfs:label>stageInExecTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#stageOutExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#stageOutExecTime">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:label>Time of job stageIn operations</rdfs:label>
+        <rdfs:label>stageOutExecTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#status -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#status">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:comment>The status of the job</rdfs:comment>
+        <rdfs:label>status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#toProgram -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#toProgram">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Controller"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#totalExecTime -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#totalExecTime">
+        <rdfs:domain rdf:resource="http://unicore.eu/ns/uniprov#UnicoreJobExecution"/>
+        <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
+        <rdfs:label>totalExecTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#workflowID -->
+
+    <owl:DatatypeProperty rdf:about="http://unicore.eu/ns/uniprov#workflowID">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Workflow"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -30,31 +171,74 @@
     
 
 
-    <!-- http://w3id.org/uniprov/spec/2016/08/05/ontology#EnvironmentRessources -->
+    <!-- http://unicore.eu/ns/uniprov#EnvironmentVariablesCollection -->
 
-    <owl:Class rdf:about="http://w3id.org/uniprov/spec/2016/08/05/ontology#EnvironmentRessources">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment>An EnvironmentResource represents a possibility to store information about environment  resources an execution is using or that are present in the particular environment of a programm or workflow execution. Can be in a prov:Collection.</rdfs:comment>
-        <rdfs:label>EnvironmentResource</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/uniprov/spec/2016/08/05/ontology#EnvironmentVariable -->
-
-    <owl:Class rdf:about="http://w3id.org/uniprov/spec/2016/08/05/ontology#EnvironmentVariable">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#EnvironmentVariablesCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>An EnvironmentVariable represents a possibility to store information about environment variables an execution is using or that are present in the particular environment of a program or workflow execution. Can be in a prov:Collection.</rdfs:comment>
-        <rdfs:label>EnvironmentVariable</rdfs:label>
+        <rdfs:label>EnvironmentVariablesCollection</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/uniprov/spec/2016/08/05/ontology#UnicoreJob -->
+    <!-- http://unicore.eu/ns/uniprov#JobAnnotationsCollection -->
 
-    <owl:Class rdf:about="http://w3id.org/uniprov/spec/2016/08/05/ontology#UnicoreJob">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#JobAnnotationsCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+        <rdfs:comment>Collection of user annotations describing the job</rdfs:comment>
+        <rdfs:label>JobAnnotationsCollection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#JobResourcesCollection -->
+
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#JobResourcesCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+        <rdfs:comment>An EnvironmentResource represents a possibility to store information about environment  resources an execution is using or that are present in the particular environment of a programm or workflow execution. Can be in a prov:Collection.</rdfs:comment>
+        <rdfs:label>JobResourcesCollection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#Transition -->
+
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#Transition">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Controller"/>
+        <rdfs:comment>A Transition links parts of the workflow.</rdfs:comment>
+        <rdfs:label>SimpleTransition</rdfs:label>
+        <prov:category>UNICORE workflow-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#UnicoreJobExecution -->
+
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#UnicoreJobExecution">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Execution"/>
+        <rdfs:comment>Represents the execution of an UNICORE job script</rdfs:comment>
+        <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
+        <rdfs:label>UnicoreJobExecution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#UnicoreJobScript -->
+
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#UnicoreJobScript">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Program"/>
+        <rdfs:comment>Extends the provone:Program by Unicore specific features</rdfs:comment>
+        <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
+        <rdfs:label>UnicoreJobScript</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://unicore.eu/ns/uniprov#UnicoreWorkflow -->
+
+    <owl:Class rdf:about="http://unicore.eu/ns/uniprov#UnicoreWorkflow">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Workflow"/>
+        <rdfs:label>UnicoreWorkflow</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
