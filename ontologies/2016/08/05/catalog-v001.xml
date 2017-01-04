@@ -3,10 +3,6 @@
     <uri id="Imports Wizard Entry" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="file:/C:/Users/agiesler/FZJ/FSD-Miniprojekt-Provenance/provone.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="http://www.w3.org/ns/prov-o"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1472634542410" name="duplicate:http://unicore.eu/ns/uniprov" uri="uniprov.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472634542410" name="duplicate:http://unicore.eu/ns/uniprov" uri="uniprov_mit_hash.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472634542410" name="http://unicore.eu/ns/uniprov#" uri="uniprov_owl_syntax.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472634542410" name="duplicate:http://unicore.eu/ns/uniprov/" uri="uniprov_neu.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472634542410" name="duplicate:http://unicore.eu/ns/uniprov/" uri="uniprov_old.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1483534627422" name="http://unicore.eu/ns/uniprov" uri="uniprov.owl"/>
     </group>
 </catalog>
