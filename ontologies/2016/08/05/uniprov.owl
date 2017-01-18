@@ -18,11 +18,12 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
         <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology</rdfs:seeAlso>
-        <rdfs:comment>The UNICORE Provenance Ontology</rdfs:comment>
-        <terms:issued>18-01-2017</terms:issued>
+        <dc:creator xml:lang="de">André Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
+        <dc:contributor xml:lang="de">Myriam Czekala, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:contributor>
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
-        <dc:creator xml:lang="de">Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH</dc:creator>
+        <dc:date>18-01-2017</dc:date>
         <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
+        <rdfs:comment>This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system.</rdfs:comment>
     </owl:Ontology>
     
 
