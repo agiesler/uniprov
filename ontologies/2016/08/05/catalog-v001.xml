@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/dc/elements/1.1/" uri="http://protege.stanford.edu/plugins/owl/dc/dublincore.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="file:/C:/Users/agiesler/FZJ/FSD-Miniprojekt-Provenance/provone.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="http://www.w3.org/ns/prov-o"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1483534627422" name="http://unicore.eu/ns/uniprov" uri="uniprov.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1484751604064" name="http://unicore.eu/ns/uniprov" uri="uniprov.owl"/>
     </group>
 </catalog>

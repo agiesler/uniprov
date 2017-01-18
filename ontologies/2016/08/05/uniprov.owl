@@ -3,21 +3,26 @@
      xml:base="http://unicore.eu/ns/uniprov"
      xmlns:uniprov="http://unicore.eu/ns/uniprov#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:provone="http://purl.dataone.org/provone/2015/01/15/ontology#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:prov="http://www.w3.org/ns/prov#">
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://unicore.eu/ns/uniprov#">
         <owl:versionIRI rdf:resource="http://unicore.eu/ns/uniprov#/1.0.0"/>
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <owl:imports rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
         <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology</rdfs:seeAlso>
         <rdfs:comment>The UNICORE Provenance Ontology</rdfs:comment>
+        <terms:issued>18-01-2017</terms:issued>
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
-        <rdfs:label>UNICORE PROV Extension for Job and Scientific Workflow Provenance</rdfs:label>
+        <dc:creator xml:lang="de">Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH</dc:creator>
+        <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
     </owl:Ontology>
     
 
