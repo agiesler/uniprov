@@ -1,2 +1,2 @@
 # uniprov
-Provenance management for UNICORE
+A provenance management system for UNICORE
