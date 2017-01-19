@@ -24,9 +24,9 @@
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
         <dc:date>18-01-2017</dc:date>
         <dc:creator xml:lang="de">Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
-        <dc:description>rdf:resource=&quot;https://rawgit.com/essepuntato/opencitations/master/ontology/core.png&quot;</dc:description>
         <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
         <rdfs:comment>This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system.</rdfs:comment>
+        <dc:description>rdf:resource=&quot;https://rawgit.com/agiesler/uniprov/master/ontologies/2016/08/05/UniProvOWL2UML.png&quot;</dc:description>
     </owl:Ontology>
     
 
