@@ -292,6 +292,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#workflowID">
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreWorkflow"/>
+        <rdfs:comment>The unique ID of a UNICORE workflow</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -368,7 +369,6 @@
     <owl:Class rdf:about="http://purl.org/net/uniprov#UnicoreJobScript">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Program"/>
         <rdfs:comment>Extends the provone:Program by Unicore specific features</rdfs:comment>
-        <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
         <rdfs:label>UnicoreJobScript</rdfs:label>
         <prov:category>UNICORE workflow-specification</prov:category>
     </owl:Class>
