@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1484926136755" name="duplicate:http://purl.org/net/uniprov" uri="uniprov.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1484926136755" name="duplicate:http://purl.org/net/uniprov" uri="uniprov.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1484928210379" name="http://purl.dataone.org/provone/2015/01/15/ontology" uri="provone.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1484928210379" name="http://purl.org/net/uniprov" uri="uniprov.owl"/>
     </group>
 </catalog>
