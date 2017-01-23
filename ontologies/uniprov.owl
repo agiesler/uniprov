@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <rdf:RDF xmlns="http://purl.org/net/uniprov#"
      xml:base="http://purl.org/net/uniprov"
      xmlns:uniprov="http://purl.org/net/uniprov#"
@@ -17,7 +18,6 @@
         <owl:imports rdf:resource="http://purl.org/net/uniprov/provone#"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology</rdfs:seeAlso>
-        <dc:creator xml:lang="de">Andree Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
         <dc:description xml:lang="en">The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</dc:description>
         <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png"/>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
@@ -25,6 +25,7 @@
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
         <dc:date>2017-01-18</dc:date>
         <prov:specializationOf xml:lang="en">https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl</prov:specializationOf>
+        <dc:creator xml:lang="de">Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
         <dc:description xml:lang="en"></dc:description>
         <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
         <rdfs:comment>This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system.</rdfs:comment>
@@ -123,6 +124,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#controlledBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#controlledBy"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#controls -->
+
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#controls"/>
     
 
 
@@ -302,6 +315,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Controller -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Controller"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Execution -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Execution"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Program -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Program"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Workflow -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Workflow"/>
     
 
 
