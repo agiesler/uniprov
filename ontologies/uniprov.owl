@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <rdf:RDF xmlns="http://purl.org/net/uniprov#"
      xml:base="http://purl.org/net/uniprov"
      xmlns:uniprov="http://purl.org/net/uniprov#"
@@ -23,8 +22,8 @@
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
         <dc:contributor xml:lang="de">Myriam Czekala, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:contributor>
         <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
-        <dc:date>2017-01-18</dc:date>
         <prov:specializationOf xml:lang="en">https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl</prov:specializationOf>
+        <dc:date>2017-01-18</dc:date>
         <dc:creator xml:lang="de">Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
         <dc:description xml:lang="en"></dc:description>
         <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
