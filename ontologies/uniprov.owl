@@ -20,7 +20,7 @@
         <dc:description xml:lang="en">The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</dc:description>
         <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png"/>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
-        <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.w3.org/ns/prov-o</rdfs:seeAlso>
         <prov:specializationOf xml:lang="en">https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl</prov:specializationOf>
         <dc:date>2017-01-18</dc:date>
         <dc:description xml:lang="en"></dc:description>
