@@ -25,7 +25,7 @@
         <prov:specializationOf>http://www.w3.org/ns/prov-o</prov:specializationOf>
         <owl:versionInfo>Version 1.0</owl:versionInfo>
         <rdfs:comment>This document describes an extension of the W3C PROV standard for scientific workflow provenance.  It represents a potential standard published publicly for evaluation and possible adoption.  However, it is not associated with and is not supported by any standards organization.</rdfs:comment>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:Ontology>
     
 
