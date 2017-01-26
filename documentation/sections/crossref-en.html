@@ -1,0 +1,880 @@
+<h2  id="crossreference" class="list">Cross reference for UniProv: A PROV Extension for UNICORE classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by UniProv: A PROV Extension for UNICORE.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection">EnvironmentVariablesCollection</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport">ErrorReport</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection">JobAnnotationsCollection</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection">JobResourcesCollection</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop">UnicoreForEachLoop</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop">UnicoreRepeatUntilLoop</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow">UnicoreSubWorkflow</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop">UnicoreWhileLoop</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow">UnicoreWorkflow</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection">
+      <h3>EnvironmentVariablesCollection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection</p>
+      <div class="comment">
+         <span class="markdown">A collection containing environment variables of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Collection">collection</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport">
+      <h3>ErrorReport<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport</p>
+      <div class="comment">
+         <span class="markdown">Provides error information if something went wrong during the provenance generation process</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document">document</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage">error message</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace">stacktrace</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection">
+      <h3>JobAnnotationsCollection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection</p>
+      <div class="comment">
+         <span class="markdown">A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Collection">collection</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection">hasJobAnnotationsCollection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection">
+      <h3>JobResourcesCollection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection</p>
+      <div class="comment">
+         <span class="markdown">A collection containing environment resources used in a UNICORE job execution.  These constituents are entities and said to be members of the collection.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Collection">collection</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">
+      <h3>Transition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#Transition</p>
+      <div class="comment">
+         <span class="markdown">A transition links parts of the workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller">controller</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression">conditional expression</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">isTransitionFrom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">isTransitionTo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">hasFromTransition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">hasToTransition</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop">
+      <h3>UnicoreForEachLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">
+      <h3>UnicoreJobExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://purl.org/net/uniprov#</dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Represents the execution of an UNICORE job script</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID">batchSystemID</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime">dataMoveExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime">inQueueExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo">machineInfo</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime">stageInExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime">stageOutExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#status"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#status">status</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime">totalExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">
+      <h3>UnicoreJobScript<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript</p>
+      <div class="comment">
+         <span class="markdown">Extends the provone:Program by Unicore specific features</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">hasFromTransition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection">hasJobAnnotationsCollection</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">hasToTransition</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">isTransitionFrom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">isTransitionTo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop">
+      <h3>UnicoreRepeatUntilLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow">
+      <h3>UnicoreSubWorkflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow">workflow</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop">
+      <h3>UnicoreWhileLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow">
+      <h3>UnicoreWorkflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow">workflow</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#workflowID"
+               title="http://purl.dataone.org/provone/2015/01/15/ontology#workflowID">workflow i d</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">hasFromTransition</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection">hasJobAnnotationsCollection</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">hasToTransition</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">isTransitionFrom</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">isTransitionTo</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">
+      <h3>hasFromTransition<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition</p>
+      <div class="comment">
+         <span class="markdown">A property relating a UnicoreJobScript to the Transition it was started from</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy">controlled by</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">isTransitionFrom</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection">
+      <h3>hasJobAnnotationsCollection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection</p>
+      <div class="comment">
+         <span class="markdown">Specifies that a given Program (UNICORE script) has a collection of user annotation entities.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection">JobAnnotationsCollection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">
+      <h3>hasToTransition<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition</p>
+      <div class="comment">
+         <span class="markdown">Relates a UnicoreJobScript to the succeeding Transition</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy">controlled by</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">isTransitionTo</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">
+      <h3>isTransitionFrom<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls">controls</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">hasFromTransition</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">
+      <h3>isTransitionTo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls">controls</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">UnicoreJobScript</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">hasToTransition</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID">batchSystemID</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression">
+            <span>conditional expression</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime">dataMoveExecTime</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage">
+            <span>error message</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime">inQueueExecTime</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo">machineInfo</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace">
+            <span>stacktrace</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime">stageInExecTime</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime">stageOutExecTime</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#status"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#status">status</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime">totalExecTime</a>
+      </li>
+      <li>
+         <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#workflowID"
+            title="http://purl.dataone.org/provone/2015/01/15/ontology#workflowID">
+            <span>workflow i d</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID">
+      <h3>batchSystemID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID</p>
+      <div class="comment">
+         <span class="markdown">Id of the used batch system</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression">
+      <h3>conditional expression<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#Transition"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">Transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime">
+      <h3>dataMoveExecTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime</p>
+      <div class="comment">
+         <span class="markdown">Time of data movement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage">
+      <h3>error message<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage</p>
+      <div class="comment">
+         <span class="markdown">Delivers the error message</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport">ErrorReport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime">
+      <h3>inQueueExecTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime</p>
+      <div class="comment">
+         <span class="markdown">Time of job in queue</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo">
+      <h3>machineInfo<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo</p>
+      <div class="comment">
+         <span class="markdown">Info of the machine where the job runs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace">
+      <h3>stacktrace<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace</p>
+      <div class="comment">
+         <span class="markdown">Delivers the stack trace of the provenance process error</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport">ErrorReport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime">
+      <h3>stageInExecTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime</p>
+      <div class="comment">
+         <span class="markdown">Time of job stageOut operations</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime">
+      <h3>stageOutExecTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#status">
+      <h3>status<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#status</p>
+      <div class="comment">
+         <span class="markdown">The status of the job</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime">
+      <h3>totalExecTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>http://purl.org/net/uniprov#</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">UnicoreJobExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.dataone.org/provone/2015/01/15/ontology#workflowID">
+      <h3>workflow i d<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.dataone.org/provone/2015/01/15/ontology#workflowID</p>
+      <div class="comment">
+         <span class="markdown">The unique ID of a UNICORE workflow</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow"
+                  title="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow">UnicoreWorkflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div>

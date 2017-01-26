@@ -1,0 +1,70 @@
+ontologyTitle=UniProv Provenance Management
+ontologyPrefix=[Ontology NS Prefix]
+ontologyNamespaceURI=http://purl.org/net/uniprov#
+ontologyName=UniProv: A PROV Extension for UNICORE
+thisVersionURI=http://purl.org/net/uniprov#0.1.0
+latestVersionURI=http://purl.org/net/uniprov#
+previousVersionURI=
+dateOfRelease=2017-01-18
+ontologyRevisionNumber=0.1
+licenseURI=http://creativecommons.org/licenses/by/4.0/
+licenseName=This work is distributed under a Creative Commons Attribution License.
+licenseIconURL=https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+DOI=
+status=UniProv Ontology Specification Draft
+publisher=
+publisherURI=
+publisherInstitution=
+publisherInstitutionURI=
+authors=Andr&eacute Giesler;Myriam Czekala
+authorsURI=http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/giesler_a.html?nn=362224;http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/czekala_m.html?nn=362224
+authorsInstitution=Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany;Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany
+authorsInstitutionURI=;
+contributors=
+contributorsURI=
+contributorsInstitution=
+contributorsInstitutionURI=
+importedOntologyNames=ProvONE
+importedOntologyURIs=https://rawgit.com/DataONEorg/sem-prov-ontologies/master/provenance/ProvONE/v1/owl/provone.owl
+extendedOntologyNames=
+extendedOntologyURIs=
+abstract=The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.
+introTitle=Introduction
+introPlaceHolder=Introduction <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2>\n<p>The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</p>\n
+overviewTitle=Overview
+overviewPlaceHolder=Overview <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2>\n<p>This ontology has the following classes and properties.</p>\n
+descriptionTitle=Description
+descriptionPlaceHolder=Description <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2>\n<p class="image"><object data="https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png" type="image/png"></object></p>\n
+crossRefTitle=Cross reference for
+crossRefTitle2=classes, properties and dataproperties <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span>
+crossRefPlaceHolder=This section provides details for each class and property defined by 
+classes=Classes
+objProp=Object Properties
+dataProp=Data Properties
+annProp=Annotation Properties
+namedIndiv=Named Individuals
+referencesTitle=References
+referencesPlaceHolder=References <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2>\n<p>Add your references here. It is recommended to have them as a list.</p>\n
+ackTitle=Acknowledgements
+ackText=Acknowledgements <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2>\n<p>The authors would like to thank <a href=\"http://www.essepuntato.it/\">Silvio Peroni</a> for developing <a href=\"http://www.essepuntato.it/lode\">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href=\"https://w3id.org/people/dgarijo\">Daniel Garijo</a> for developing <a href=\"https://github.com/dgarijo/Widoco\">Widoco</a>, the program used to create the template used in this documentation.</p>\n</div>\n
+prov1=Provenance for
+prov2=Documentation
+createdBy=Ontology created by:
+contribBy=Ontology contributed to by: 
+spec=is a specialization of the generic URI
+rev=is a revision of the previous version
+result=The ontology documentation was the result of using the <a href=\"https://github.com/dgarijo/Widoco\">Widoco tool</a> (which itself uses <a href=\"http://www.essepuntato.it/lode/\">LODE</a> for generating the crossreference section).</li>\n
+generated=The documentation was generated at
+changeLog=<div id=\"changelog\"><h2>Changes since last release <span class=\"backlink\"> back to <a href=\"#toc\">ToC</a></span></h2><p>This is a changelog. This section is optional but recommended</p></div>
+back=Back to
+back1=documentation
+back2=TTL format
+back3=back to ToC
+provHead=Provenance of this page
+serialization=Download serialization:
+notAccPage=<title>406 Not Acceptable</title>\n</head>\n<body>\n<h1>Not Acceptable</h1>\n<p>An appropriate representation of the requested resource could not be found on this server.</p>\n Available variants:
+visualization=Visualization:
+publisher=Publisher:
+RDFXMLSerialization=https://raw.githubusercontent.com/agiesler/uniprov/master/ontologies/uniprov.owl
+TurtleSerialization=https://rawgit.com/agiesler/uniprov/master/ontologies/uniprov.ttl
+N3Serialization=https://rawgit.com/agiesler/uniprov/master/ontologies/uniprov.n3

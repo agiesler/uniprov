@@ -4,23 +4,23 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:provone="http://purl.org/net/uniprov/provone#"
+     xmlns:provone="http://purl.dataone.org/provone/2015/01/15/ontology#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://purl.org/net/uniprov#">
-        <owl:versionIRI rdf:resource="http://purl.org/net/uniprov#0.1.0"/>
-        <owl:imports rdf:resource="http://purl.org/net/uniprov/provone#"/>
+    <owl:Ontology rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#">
+        <owl:versionIRI rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#0.1.0"/>
+        <owl:imports rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:creator>Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
-        <rdfs:seeAlso>http://purl.org/net/uniprov/provone</rdfs:seeAlso>
+        <rdfs:seeAlso>http://www.w3.org/ns/prov-o</rdfs:seeAlso>
         <dc:description xml:lang="en">The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</dc:description>
         <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png"/>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
-        <rdfs:seeAlso>http://www.w3.org/ns/prov-o</rdfs:seeAlso>
+        <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology/provone</rdfs:seeAlso>
         <prov:specializationOf xml:lang="en">https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl</prov:specializationOf>
         <dc:date>2017-01-18</dc:date>
         <dc:description xml:lang="en"></dc:description>
@@ -119,75 +119,75 @@
     
 
 
-    <!-- http://purl.org/net/uniprov/provone#controlledBy -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov/provone#controlledBy"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#controls -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov/provone#controls"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov#hasFromTransition -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasFromTransition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/uniprov#isTransitionFrom"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobScript"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy"/>
+        <owl:inverseOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom"/>
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"/>
+        <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Transition"/>
         <rdfs:comment>A property relating a UnicoreJobScript to the Transition it was started from</rdfs:comment>
         <rdfs:label>hasFromTransition</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#hasJobAnnotationsCollection -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasJobAnnotationsCollection">
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobScript"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobAnnotationsCollection"/>
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"/>
+        <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection"/>
         <rdfs:comment>Specifies that a given Program (UNICORE script) has a collection of user annotation entities.</rdfs:comment>
         <rdfs:label>hasJobAnnotationsCollection</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#hasToTransition -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasToTransition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/uniprov#isTransitionTo"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobScript"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy"/>
+        <owl:inverseOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo"/>
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"/>
+        <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Transition"/>
         <rdfs:comment>Relates a UnicoreJobScript to the succeeding Transition</rdfs:comment>
         <rdfs:label>hasToTransition</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#isTransitionFrom -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransitionFrom">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controls"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#UnicoreJobScript"/>
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom">
+        <rdfs:subPropertyOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls"/>
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Transition"/>
+        <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"/>
         <rdfs:label>isTransitionFrom</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#isTransitionTo -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransitionTo">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controls"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#UnicoreJobScript"/>
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls"/>
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Transition"/>
+        <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript"/>
         <rdfs:label>isTransitionTo</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls -->
+
+    <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls"/>
     
 
 
@@ -202,98 +202,119 @@
     
 
 
-    <!-- http://purl.org/net/uniprov#batchSystemID -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#batchSystemID">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment>Delivers the error message</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment>Delivers the stack trace of the provenance process error</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>Id of the used batch system</rdfs:comment>
         <rdfs:label>batchSystemID</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#conditionalExpression -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#conditionalExpression">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Transition"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#dataMoveExecTime -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#dataMoveExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>Time of data movement</rdfs:comment>
         <rdfs:label>dataMoveExecTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#inQueueExecTime -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#inQueueExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>Time of job in queue</rdfs:comment>
         <rdfs:label>inQueueExecTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#machineInfo -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#machineInfo">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>Info of the machine where the job runs</rdfs:comment>
         <rdfs:label>machineInfo</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#stageInExecTime -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#stageInExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>Time of job stageOut operations</rdfs:comment>
         <rdfs:label>stageInExecTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#stageOutExecTime -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#stageOutExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:label>Time of job stageIn operations</rdfs:label>
         <rdfs:label>stageOutExecTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#status -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#status -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#status">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#status">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:comment>The status of the job</rdfs:comment>
         <rdfs:label>status</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#totalExecTime -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#totalExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreJobExecution"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution"/>
         <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
         <rdfs:label>totalExecTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#workflowID -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#workflowID -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#workflowID">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreWorkflow"/>
+    <owl:DatatypeProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#workflowID">
+        <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>The unique ID of a UNICORE workflow</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -310,104 +331,164 @@
     
 
 
-    <!-- http://purl.org/net/uniprov/provone#Controller -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Controller"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Execution -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Execution"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Program -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Program"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Workflow -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Workflow"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov#EnvironmentVariablesCollection -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov#EnvironmentVariablesCollection">
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>A collection containing environment variables of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
         <rdfs:label>EnvironmentVariablesCollection</rdfs:label>
-        <prov:category>UNICORE job-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#JobAnnotationsCollection -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#JobAnnotationsCollection">
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document"/>
+        <rdfs:comment>Provides error information if something went wrong during the provenance generation process</rdfs:comment>
+        <rdfs:label>ErrorReport</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
         <rdfs:label>JobAnnotationsCollection</rdfs:label>
-        <prov:category>UNICORE job-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#JobResourcesCollection -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#JobResourcesCollection">
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>A collection containing environment resources used in a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
         <rdfs:label>JobResourcesCollection</rdfs:label>
-        <prov:category>UNICORE job-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#Transition -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#Transition -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#Transition">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Controller"/>
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Transition">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller"/>
         <rdfs:comment>A transition links parts of the workflow.</rdfs:comment>
         <rdfs:label>Transition</rdfs:label>
-        <prov:category>UNICORE workflow-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#UnicoreJobExecution -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#UnicoreJobExecution">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution"/>
+        <rdfs:comment>Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
+        <rdfs:label>UnicoreForEachLoop</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution"/>
         <rdfs:comment>Represents the execution of an UNICORE job script</rdfs:comment>
-        <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://purl.dataone.org/provone/2015/01/15/ontology#</rdfs:isDefinedBy>
         <rdfs:label>UnicoreJobExecution</rdfs:label>
-        <prov:category>UNICORE workflow-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#UnicoreJobScript -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#UnicoreJobScript">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Program"/>
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program"/>
         <rdfs:comment>Extends the provone:Program by Unicore specific features</rdfs:comment>
         <rdfs:label>UnicoreJobScript</rdfs:label>
-        <prov:category>UNICORE workflow-specification</prov:category>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#UnicoreWorkflow -->
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#UnicoreWorkflow">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Workflow"/>
-        <rdfs:label>UnicoreWorkflow</rdfs:label>
-        <prov:category>UNICORE workflow-specification</prov:category>
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution"/>
+        <rdfs:comment>Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
+        <rdfs:label>UnicoreRepeatUntilLoop</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
     </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow"/>
+        <rdfs:label>UnicoreSubWorkflow</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution"/>
+        <rdfs:comment>Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
+        <rdfs:label>UnicoreWhileLoop</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow"/>
+        <rdfs:label>UnicoreWorkflow</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program"/>
+    
+
+
+    <!-- http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow"/>
     
 
 

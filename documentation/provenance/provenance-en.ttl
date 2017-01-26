@@ -1,0 +1,13 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://purl.org/net/uniprov#0.1.0> a prov:Entity;
+	 dc:title "UniProv Provenance Management";
+	 prov:wasAttributedTo <http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/giesler_a.html?nn=362224>;
+	 dc:creator <http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/giesler_a.html?nn=362224>;
+	 prov:wasAttributedTo <http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/czekala_m.html?nn=362224>;
+	 dc:creator <http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/czekala_m.html?nn=362224>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://purl.org/net/uniprov#>;
+	 prov:wasGeneratedAt "2017-01-18";
+.
