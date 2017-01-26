@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Entered Import Resolution" name="http://www.w3.org/ns/prov-dc-20130430" uri="file:/C:/Users/agiesler/FZJ/FSD-Miniprojekt-Provenance/prov-o-20130430.ttl"/>
     <uri id="Imports Wizard Entry" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="https://rawgit.com/DataONEorg/sem-prov-ontologies/master/provenance/ProvONE/v1/owl/provone.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/net/uniprov/provone#" uri="provone.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="https://raw.githubusercontent.com/agiesler/uniprov/master/ontologies/provone.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1485443900423" name="http://purl.org/net/uniprov" uri="uniprov.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1485443900423" name="http://purl.org/net/uniprov/provone" uri="provone.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485471798095" name="http://purl.org/net/uniprov" uri="uniprov.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485471798095" name="http://purl.org/net/uniprov/provone" uri="provone.owl"/>
     </group>
 </catalog>
