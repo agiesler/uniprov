@@ -8,6 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:prov="http://www.w3.org/ns/prov#">
     <owl:Ontology rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#">
+	<owl:ontologyIRI rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#" />
         <owl:versionIRI rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
         <rdfs:comment>This document describes an extension of the W3C PROV standard for scientific workflow provenance.  It represents a potential standard published publicly for evaluation and possible adoption.  However, it is not associated with and is not supported by any standards organization.</rdfs:comment>
