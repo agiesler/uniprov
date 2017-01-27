@@ -27,6 +27,7 @@
         <rdfs:label>UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance</rdfs:label>
         <rdfs:seeAlso>http://purl.dataone.org/provone/2015/01/15/ontology#</rdfs:seeAlso>
         <rdfs:comment>This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system.</rdfs:comment>
+        <rdfs:seeAlso>http://jenkins-1.dataone.org/jenkins/view/Documentation%20Projects/job/ProvONE-Documentation-trunk/ws/provenance/ProvONE/v1/provone.html</rdfs:seeAlso>
     </owl:Ontology>
     
 
@@ -122,18 +123,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#controlledBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov/provone#controlledBy"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#controls -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov/provone#controls"/>
     
 
 
@@ -349,36 +338,6 @@
     
 
 
-    <!-- http://purl.org/net/uniprov/provone#Controller -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Controller"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Document -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Document"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Execution -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Execution"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Program -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Program"/>
-    
-
-
-    <!-- http://purl.org/net/uniprov/provone#Workflow -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Workflow"/>
-    
-
-
     <!-- http://purl.org/net/uniprov#EnvironmentVariablesCollection -->
 
     <owl:Class rdf:about="http://purl.org/net/uniprov#EnvironmentVariablesCollection">
@@ -509,6 +468,34 @@
     </owl:Class>
     
 
+
+    <!-- http://purl.org/net/uniprov/provone#Controller -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Controller"/>
+    
+
+
+    <!-- http://purl.org/net/uniprov/provone#Document -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Document"/>
+    
+
+
+    <!-- http://purl.org/net/uniprov/provone#Execution -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Execution"/>
+    
+
+
+    <!-- http://purl.org/net/uniprov/provone#Program -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Program"/>
+    
+
+
+    <!-- http://purl.org/net/uniprov/provone#Workflow -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Workflow"/>
 </rdf:RDF>
 
 
