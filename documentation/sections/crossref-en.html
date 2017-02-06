@@ -11,6 +11,26 @@ This section provides details for each class and property defined by UniProv: A 
          <a href="#ErrorReport" title="http://purl.org/net/uniprov#ErrorReport">ErrorReport</a>
       </li>
       <li>
+         <a href="#ForEachExecution" title="http://purl.org/net/uniprov#ForEachExecution">ForEachExecution</a>
+      </li>
+      <li>
+         <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+      </li>
+      <li>
+         <a href="#Group" title="http://purl.org/net/uniprov#Group">Group</a>
+      </li>
+      <li>
+         <a href="#GroupExecution" title="http://purl.org/net/uniprov#GroupExecution">GroupExecution</a>
+      </li>
+      <li>
+         <a href="#Hold" title="http://purl.org/net/uniprov#Hold">Hold</a>
+      </li>
+      <li>
+         <a href="#HoldInteraction" title="http://purl.org/net/uniprov#HoldInteraction">
+            <span>hold interaction</span>
+         </a>
+      </li>
+      <li>
          <a href="#JobAnnotationsCollection"
             title="http://purl.org/net/uniprov#JobAnnotationsCollection">JobAnnotationsCollection</a>
       </li>
@@ -19,29 +39,40 @@ This section provides details for each class and property defined by UniProv: A 
             title="http://purl.org/net/uniprov#JobResourcesCollection">JobResourcesCollection</a>
       </li>
       <li>
+         <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
+      </li>
+      <li>
+         <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
+      </li>
+      <li>
+         <a href="#ModifyVar" title="http://purl.org/net/uniprov#ModifyVar">ModifyVar</a>
+      </li>
+      <li>
+         <a href="#ModifyVarExecution" title="http://purl.org/net/uniprov#ModifyVarExecution">ModifyVarExecution</a>
+      </li>
+      <li>
+         <a href="#RepeatUntilExec" title="http://purl.org/net/uniprov#RepeatUntilExec">RepeatUntilExecution</a>
+      </li>
+      <li>
+         <a href="#RepeatUntilLoop" title="http://purl.org/net/uniprov#RepeatUntilLoop">RepeatUntilLoop</a>
+      </li>
+      <li>
          <a href="#Transition" title="http://purl.org/net/uniprov#Transition">Transition</a>
       </li>
       <li>
-         <a href="#UnicoreForEachLoop" title="http://purl.org/net/uniprov#UnicoreForEachLoop">UnicoreForEachLoop</a>
-      </li>
-      <li>
-         <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
-      </li>
-      <li>
-         <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
-      </li>
-      <li>
-         <a href="#UnicoreRepeatUntilLoop"
-            title="http://purl.org/net/uniprov#UnicoreRepeatUntilLoop">UnicoreRepeatUntilLoop</a>
-      </li>
-      <li>
-         <a href="#UnicoreSubWorkflow" title="http://purl.org/net/uniprov#UnicoreSubWorkflow">UnicoreSubWorkflow</a>
-      </li>
-      <li>
-         <a href="#UnicoreWhileLoop" title="http://purl.org/net/uniprov#UnicoreWhileLoop">UnicoreWhileLoop</a>
-      </li>
-      <li>
          <a href="#UnicoreWorkflow" title="http://purl.org/net/uniprov#UnicoreWorkflow">UnicoreWorkflow</a>
+      </li>
+      <li>
+         <a href="#WhileLoop" title="http://purl.org/net/uniprov#WhileLoop">WhileLoop</a>
+      </li>
+      <li>
+         <a href="#WhileLoopExecution" title="http://purl.org/net/uniprov#WhileLoopExecution">WhileLoopExecution</a>
+      </li>
+      <li>
+         <a href="#WorkflowExecution" title="http://purl.org/net/uniprov#WorkflowExecution">WorkflowExecution</a>
+      </li>
+      <li>
+         <a href="#WorkflowVariable" title="http://purl.org/net/uniprov#WorkflowVariable">WorkflowVariable</a>
       </li>
    </ul>
    <div class="entity" id="EnvironmentVariablesCollection">
@@ -79,9 +110,133 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#ErrorMessage" title="http://purl.org/net/uniprov#ErrorMessage">error message</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#Stacktrace" title="http://purl.org/net/uniprov#Stacktrace">stacktrace</a>
+            <a href="#errorMessage" title="http://purl.org/net/uniprov#errorMessage">error message</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stacktrace" title="http://purl.org/net/uniprov#stacktrace">stacktrace</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ForEachExecution">
+      <h3>ForEachExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#ForEachExecution</p>
+      <div class="comment">
+         <span class="markdown">Execution of the Unicore workflow system looping construct allowing to loop a certain part of the workflow for each provided variable, file or dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ForEachLoop">
+      <h3>ForEachLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#ForEachLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow for each provided variable, file or dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#forEachIterSize" title="http://purl.org/net/uniprov#forEachIterSize">forEachIterSize</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#forEachIterSizeType" title="http://purl.org/net/uniprov#forEachIterSizeType">forEachIterSizeType</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#forEachIterateType" title="http://purl.org/net/uniprov#forEachIterateType">forEachIterateType</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#forEachNrOfParTasks" title="http://purl.org/net/uniprov#forEachNrOfParTasks">forEachNrOfParTasks</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#LoopInitialValue" title="http://purl.org/net/uniprov#LoopInitialValue">loopInitialValue</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#loopModifier" title="http://purl.org/net/uniprov#loopModifier">loopModifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#loopVariable" title="http://purl.org/net/uniprov#loopVariable">loopVariable</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Group">
+      <h3>Group<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#Group</p>
+      <div class="comment">
+         <span class="markdown">A group is a container for other UNICORE activities.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GroupExecution">
+      <h3>GroupExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#GroupExecution</p>
+      <div class="comment">
+         <span class="markdown">Execution of a group container</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hold">
+      <h3>Hold<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#Hold</p>
+      <div class="comment">
+         <span class="markdown">Contains a hold of the workflow</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HoldInteraction">
+      <h3>hold interaction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#HoldInteraction</p>
+      <div class="comment">
+         <span class="markdown">Waits for user interaction</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -125,99 +280,15 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Transition">
-      <h3>Transition<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="JobScript">
+      <h3>JobScript<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#Transition</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#JobScript</p>
       <div class="comment">
-         <span class="markdown">A transition links parts of the workflow.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/uniprov/provone#Controller">controller</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#conditionalExpression"
-               title="http://purl.org/net/uniprov#conditionalExpression">conditional expression</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransitionFrom" title="http://purl.org/net/uniprov#isTransitionFrom">isTransitionFrom</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isTransitionTo" title="http://purl.org/net/uniprov#isTransitionTo">isTransitionTo</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasFromTransition" title="http://purl.org/net/uniprov#hasFromTransition">hasFromTransition</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasToTransition" title="http://purl.org/net/uniprov#hasToTransition">hasToTransition</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="UnicoreForEachLoop">
-      <h3>UnicoreForEachLoop<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreForEachLoop</p>
-      <div class="comment">
-         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="UnicoreJobExecution">
-      <h3>UnicoreJobExecution<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreJobExecution</p>
-      <dl class="definedBy">
-         <dt>is defined by</dt>
-         <dd>http://purl.org/net/uniprov#</dd>
-      </dl>
-      <div class="comment">
-         <span class="markdown">Represents the execution of an UNICORE job script</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#batchSystemID" title="http://purl.org/net/uniprov#batchSystemID">batchSystemID</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#dataMoveExecTime" title="http://purl.org/net/uniprov#dataMoveExecTime">dataMoveExecTime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#inQueueExecTime" title="http://purl.org/net/uniprov#inQueueExecTime">inQueueExecTime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#machineInfo" title="http://purl.org/net/uniprov#machineInfo">machineInfo</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#stageInExecTime" title="http://purl.org/net/uniprov#stageInExecTime">stageInExecTime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#stageOutExecTime" title="http://purl.org/net/uniprov#stageOutExecTime">stageOutExecTime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#status" title="http://purl.org/net/uniprov#status">status</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#totalExecTime" title="http://purl.org/net/uniprov#totalExecTime">totalExecTime</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="UnicoreJobScript">
-      <h3>UnicoreJobScript<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreJobScript</p>
-      <div class="comment">
-         <span class="markdown">Extends the provone:Program by Unicore specific features</span>
+         <span class="markdown">Contains the script input of a singel compute job</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -241,15 +312,64 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="UnicoreRepeatUntilLoop">
-      <h3>UnicoreRepeatUntilLoop<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="JobScriptExecution">
+      <h3>JobScriptExecution<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreRepeatUntilLoop</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#JobScriptExecution</p>
       <div class="comment">
-         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+         <span class="markdown">Represents the execution of an compute job script</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#batchSystemID" title="http://purl.org/net/uniprov#batchSystemID">batchSystemID</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#dataMoveExecTime" title="http://purl.org/net/uniprov#dataMoveExecTime">dataMoveExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#inQueueExecTime" title="http://purl.org/net/uniprov#inQueueExecTime">inQueueExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#machineInfo" title="http://purl.org/net/uniprov#machineInfo">machineInfo</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stageInExecTime" title="http://purl.org/net/uniprov#stageInExecTime">stageInExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stageOutExecTime" title="http://purl.org/net/uniprov#stageOutExecTime">stageOutExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#status" title="http://purl.org/net/uniprov#status">status</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#totalExecTime" title="http://purl.org/net/uniprov#totalExecTime">totalExecTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ModifyVar">
+      <h3>ModifyVar<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#ModifyVar</p>
+      <div class="comment">
+         <span class="markdown">A ModifyVar expression can be used to change the value of a workflow variable.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ModifyVarExecution">
+      <h3>ModifyVarExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#ModifyVarExecution</p>
+      <div class="comment">
+         <span class="markdown">A ModifyVarExecution changes the value of a workflow variable.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -259,36 +379,83 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="UnicoreSubWorkflow">
-      <h3>UnicoreSubWorkflow<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="RepeatUntilExec">
+      <h3>RepeatUntilExecution<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreSubWorkflow</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/uniprov/provone#Workflow">workflow</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="UnicoreWhileLoop">
-      <h3>UnicoreWhileLoop<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreWhileLoop</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#RepeatUntilExec</p>
       <div class="comment">
-         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+         <span class="markdown">Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RepeatUntilLoop">
+      <h3>RepeatUntilLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#RepeatUntilLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#LoopInitialValue" title="http://purl.org/net/uniprov#LoopInitialValue">loopInitialValue</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#loopModifier" title="http://purl.org/net/uniprov#loopModifier">loopModifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#loopVariable" title="http://purl.org/net/uniprov#loopVariable">loopVariable</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Transition">
+      <h3>Transition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#Transition</p>
+      <div class="comment">
+         <span class="markdown">A transition links parts of the workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Controller">controller</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#conditionalExpression"
+               title="http://purl.org/net/uniprov#conditionalExpression">conditionalExpression</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransitionFrom" title="http://purl.org/net/uniprov#isTransitionFrom">isTransitionFrom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isTransitionTo" title="http://purl.org/net/uniprov#isTransitionTo">isTransitionTo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFromTransition" title="http://purl.org/net/uniprov#hasFromTransition">hasFromTransition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasToTransition" title="http://purl.org/net/uniprov#hasToTransition">hasToTransition</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -299,22 +466,114 @@ This section provides details for each class and property defined by UniProv: A 
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/net/uniprov#UnicoreWorkflow</p>
+      <div class="comment">
+         <span class="markdown">Represents the UNICORE top level workflow</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="http://purl.org/net/uniprov/provone#Workflow">workflow</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WhileLoop">
+      <h3>WhileLoop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#WhileLoop</p>
+      <div class="comment">
+         <span class="markdown">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Program">program</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#workflowID" title="http://purl.org/net/uniprov#workflowID">workflow i d</a>
+            <a href="#loopModifier" title="http://purl.org/net/uniprov#loopModifier">loopModifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#loopVariable" title="http://purl.org/net/uniprov#loopVariable">loopVariable</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WhileLoopExecution">
+      <h3>WhileLoopExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#WhileLoopExecution</p>
+      <div class="comment">
+         <span class="markdown">Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#LoopInitialValue" title="http://purl.org/net/uniprov#LoopInitialValue">loopInitialValue</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WorkflowExecution">
+      <h3>WorkflowExecution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#WorkflowExecution</p>
+      <div class="comment">
+         <span class="markdown">Represents the execution of a whole workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/uniprov/provone#Execution">execution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hadVariables" title="http://purl.org/net/uniprov#hadVariables">hadVariable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#workflowID" title="http://purl.org/net/uniprov#workflowID">workflow i d</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WorkflowVariable">
+      <h3>WorkflowVariable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#WorkflowVariable</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Entity">entity</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hadVariables" title="http://purl.org/net/uniprov#hadVariables">hadVariable</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#hadVariables" title="http://purl.org/net/uniprov#hadVariables">hadVariable</a>
+      </li>
       <li>
          <a href="#hasFromTransition" title="http://purl.org/net/uniprov#hasFromTransition">hasFromTransition</a>
       </li>
@@ -332,6 +591,35 @@ This section provides details for each class and property defined by UniProv: A 
          <a href="#isTransitionTo" title="http://purl.org/net/uniprov#isTransitionTo">isTransitionTo</a>
       </li>
    </ul>
+   <div class="entity" id="hadVariables">
+      <h3>hadVariable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#hadVariables</p>
+      <div class="comment">
+         <span class="markdown">Enables the specification of workflow parameters/variables.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/prov#used">used</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowExecution" title="http://purl.org/net/uniprov#WorkflowExecution">WorkflowExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#WorkflowVariable" title="http://purl.org/net/uniprov#WorkflowVariable">WorkflowVariable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasFromTransition">
       <h3>hasFromTransition<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -351,7 +639,7 @@ This section provides details for each class and property defined by UniProv: A 
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
+               <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -385,7 +673,7 @@ This section provides details for each class and property defined by UniProv: A 
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
+               <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -416,7 +704,7 @@ This section provides details for each class and property defined by UniProv: A 
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
+               <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -453,7 +741,7 @@ This section provides details for each class and property defined by UniProv: A 
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
+               <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -485,7 +773,7 @@ This section provides details for each class and property defined by UniProv: A 
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#UnicoreJobScript" title="http://purl.org/net/uniprov#UnicoreJobScript">UnicoreJobScript</a>
+               <a href="#JobScript" title="http://purl.org/net/uniprov#JobScript">JobScript</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -504,26 +792,48 @@ This section provides details for each class and property defined by UniProv: A 
       </li>
       <li>
          <a href="#conditionalExpression"
-            title="http://purl.org/net/uniprov#conditionalExpression">
-            <span>conditional expression</span>
-         </a>
+            title="http://purl.org/net/uniprov#conditionalExpression">conditionalExpression</a>
       </li>
       <li>
          <a href="#dataMoveExecTime" title="http://purl.org/net/uniprov#dataMoveExecTime">dataMoveExecTime</a>
       </li>
       <li>
-         <a href="#ErrorMessage" title="http://purl.org/net/uniprov#ErrorMessage">
+         <a href="#errorMessage" title="http://purl.org/net/uniprov#errorMessage">
             <span>error message</span>
          </a>
+      </li>
+      <li>
+         <a href="#forEachIterateType" title="http://purl.org/net/uniprov#forEachIterateType">forEachIterateType</a>
+      </li>
+      <li>
+         <a href="#forEachIterSize" title="http://purl.org/net/uniprov#forEachIterSize">forEachIterSize</a>
+      </li>
+      <li>
+         <a href="#forEachIterSizeType" title="http://purl.org/net/uniprov#forEachIterSizeType">forEachIterSizeType</a>
+      </li>
+      <li>
+         <a href="#forEachNrOfParTasks" title="http://purl.org/net/uniprov#forEachNrOfParTasks">forEachNrOfParTasks</a>
       </li>
       <li>
          <a href="#inQueueExecTime" title="http://purl.org/net/uniprov#inQueueExecTime">inQueueExecTime</a>
       </li>
       <li>
+         <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
+      </li>
+      <li>
+         <a href="#LoopInitialValue" title="http://purl.org/net/uniprov#LoopInitialValue">loopInitialValue</a>
+      </li>
+      <li>
+         <a href="#loopModifier" title="http://purl.org/net/uniprov#loopModifier">loopModifier</a>
+      </li>
+      <li>
+         <a href="#loopVariable" title="http://purl.org/net/uniprov#loopVariable">loopVariable</a>
+      </li>
+      <li>
          <a href="#machineInfo" title="http://purl.org/net/uniprov#machineInfo">machineInfo</a>
       </li>
       <li>
-         <a href="#Stacktrace" title="http://purl.org/net/uniprov#Stacktrace">
+         <a href="#stacktrace" title="http://purl.org/net/uniprov#stacktrace">
             <span>stacktrace</span>
          </a>
       </li>
@@ -559,25 +869,38 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="conditionalExpression">
-      <h3>conditional expression<sup class="type-dp" title="data property">dp</sup>
+      <h3>conditionalExpression<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/net/uniprov#conditionalExpression</p>
+      <div class="comment">
+         <span class="markdown">The conditional expression of a loop construct</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#Transition" title="http://purl.org/net/uniprov#Transition">Transition</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -596,19 +919,24 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ErrorMessage">
+   <div class="entity" id="errorMessage">
       <h3>error message<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#ErrorMessage</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#errorMessage</p>
       <div class="comment">
          <span class="markdown">Delivers the error message</span>
       </div>
@@ -617,6 +945,106 @@ This section provides details for each class and property defined by UniProv: A 
             <dt>has domain</dt>
             <dd>
                <a href="#ErrorReport" title="http://purl.org/net/uniprov#ErrorReport">ErrorReport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forEachIterateType">
+      <h3>forEachIterateType<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#forEachIterateType</p>
+      <div class="comment">
+         <span class="markdown">Specifies the type for the loop iteration.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forEachIterSize">
+      <h3>forEachIterSize<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#forEachIterSize</p>
+      <div class="comment">
+         <span class="markdown">Represents the iteration size.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forEachIterSizeType">
+      <h3>forEachIterSizeType<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#forEachIterSizeType</p>
+      <div class="comment">
+         <span class="markdown">Represents the type of the iteration size (Nr of files or chunk size in kbytes).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forEachNrOfParTasks">
+      <h3>forEachNrOfParTasks<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#forEachNrOfParTasks</p>
+      <div class="comment">
+         <span class="markdown">Represents the number of parallel tasks in a for-each loop.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -641,8 +1069,146 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="iteration">
+      <h3>iteration<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#iteration</p>
+      <div class="comment">
+         <span class="markdown">Describes the iteration step of a loop execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachExecution" title="http://purl.org/net/uniprov#ForEachExecution">ForEachExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#RepeatUntilExec" title="http://purl.org/net/uniprov#RepeatUntilExec">RepeatUntilExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#WhileLoopExecution" title="http://purl.org/net/uniprov#WhileLoopExecution">WhileLoopExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="LoopInitialValue">
+      <h3>loopInitialValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#LoopInitialValue</p>
+      <div class="comment">
+         <span class="markdown">Represents the initial value of the loop variable.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#RepeatUntilLoop" title="http://purl.org/net/uniprov#RepeatUntilLoop">RepeatUntilLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#WhileLoopExecution" title="http://purl.org/net/uniprov#WhileLoopExecution">WhileLoopExecution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="loopModifier">
+      <h3>loopModifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#loopModifier</p>
+      <div class="comment">
+         <span class="markdown">Represents an expression to modify the value of the variable</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#RepeatUntilLoop" title="http://purl.org/net/uniprov#RepeatUntilLoop">RepeatUntilLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#WhileLoop" title="http://purl.org/net/uniprov#WhileLoop">WhileLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="loopVariable">
+      <h3>loopVariable<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#loopVariable</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#RepeatUntilLoop" title="http://purl.org/net/uniprov#RepeatUntilLoop">RepeatUntilLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#WhileLoop" title="http://purl.org/net/uniprov#WhileLoop">WhileLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -661,19 +1227,24 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Stacktrace">
+   <div class="entity" id="stacktrace">
       <h3>stacktrace<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#Stacktrace</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#stacktrace</p>
       <div class="comment">
          <span class="markdown">Delivers the stack trace of the provenance process error</span>
       </div>
@@ -706,8 +1277,13 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -723,8 +1299,13 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -743,8 +1324,13 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -764,8 +1350,13 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreJobExecution" title="http://purl.org/net/uniprov#UnicoreJobExecution">UnicoreJobExecution</a>
+               <a href="#JobScriptExecution" title="http://purl.org/net/uniprov#JobScriptExecution">JobScriptExecution</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
@@ -784,12 +1375,13 @@ This section provides details for each class and property defined by UniProv: A 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#UnicoreWorkflow" title="http://purl.org/net/uniprov#UnicoreWorkflow">UnicoreWorkflow</a>
+               <a href="#WorkflowExecution" title="http://purl.org/net/uniprov#WorkflowExecution">WorkflowExecution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <span class="dotted"
+                     title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</span>
             </dd>
          </dl>
       </div>
