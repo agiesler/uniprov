@@ -139,6 +139,19 @@
     
 
 
+    <!-- http://purl.org/net/uniprov#hasAnnotation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasAnnotation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreWorkflow"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobAnnotationsCollection"/>
+        <rdfs:comment xml:lang="en">Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities.</rdfs:comment>
+        <rdfs:label>hasAnnotation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/net/uniprov#hasFromTransition -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasFromTransition">
@@ -148,18 +161,6 @@
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:comment>A property relating a UnicoreJobScript to the Transition it was started from</rdfs:comment>
         <rdfs:label>hasFromTransition</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/net/uniprov#hasJobAnnotationsCollection -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasJobAnnotationsCollection">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobAnnotationsCollection"/>
-        <rdfs:comment>Specifies that a given Program (UNICORE script) has a collection of user annotation entities.</rdfs:comment>
-        <rdfs:label>hasJobAnnotationsCollection</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -211,6 +212,28 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#used -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#used">
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#EnvironmentVariablesCollection"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobResourcesCollection"/>
+        <rdfs:comment xml:lang="en">&lt;a href=&quot;http://www.w3.org/TR/2013/REC-prov-o-20130430/#used&quot;
+           title=&quot;http://www.w3.org/ns/prov-o#used&quot;&gt;prov:used&lt;/a&gt;
+is adopted in UniProv to state that an Execution made use of a particular Entity item as input for its execution.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowVariable"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#ModifyVarExecution"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -231,6 +254,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Represents the initial value of the loop variable.</rdfs:comment>
         <rdfs:label xml:lang="en">loopInitialValue</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -242,6 +266,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Id of the used batch system</rdfs:comment>
         <rdfs:label>batchSystemID</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -253,6 +278,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The conditional expression of a loop construct</rdfs:comment>
         <rdfs:label xml:lang="en">conditionalExpression</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -264,6 +290,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of data movement</rdfs:comment>
         <rdfs:label>dataMoveExecTime</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -274,6 +301,7 @@
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ErrorReport"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Delivers the error message</rdfs:comment>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -285,6 +313,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Represents the iteration size.</rdfs:comment>
         <rdfs:label xml:lang="en">forEachIterSize</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -296,6 +325,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Represents the type of the iteration size (Nr of files or chunk size in kbytes).</rdfs:comment>
         <rdfs:label xml:lang="en">forEachIterSizeType</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -307,6 +337,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Specifies the type for the loop iteration.</rdfs:comment>
         <rdfs:label xml:lang="en">forEachIterateType</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -318,6 +349,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Represents the number of parallel tasks in a for-each loop.</rdfs:comment>
         <rdfs:label xml:lang="en">forEachNrOfParTasks</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -329,6 +361,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of job in queue</rdfs:comment>
         <rdfs:label>inQueueExecTime</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -343,6 +376,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Describes the iteration step of a loop execution.</rdfs:comment>
         <rdfs:label>iteration</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -354,8 +388,9 @@
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">Represents an expression to modify the value of the variable</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an expression to modify the value of the variable.</rdfs:comment>
         <rdfs:label>loopModifier</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -363,11 +398,13 @@
     <!-- http://purl.org/net/uniprov#loopVariable -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#loopVariable">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov#machineInfo"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:label>loopVariable</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -379,6 +416,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Info of the machine where the job runs</rdfs:comment>
         <rdfs:label>machineInfo</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -389,6 +427,7 @@
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ErrorReport"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Delivers the stack trace of the provenance process error</rdfs:comment>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -400,6 +439,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of job stageOut operations</rdfs:comment>
         <rdfs:label>stageInExecTime</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -411,6 +451,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:label>Time of job stageIn operations</rdfs:label>
         <rdfs:label>stageOutExecTime</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -422,6 +463,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>The status of the job</rdfs:comment>
         <rdfs:label>status</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -433,16 +475,19 @@
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
         <rdfs:label>totalExecTime</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#workflowID -->
+    <!-- http://purl.org/net/uniprov#workflowId -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#workflowID">
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#workflowId">
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowExecution"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>The unique ID of a UNICORE workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">workflowID</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
 
@@ -540,6 +585,7 @@
     <owl:Class rdf:about="http://purl.org/net/uniprov#HoldInteraction">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Waits for user interaction</rdfs:comment>
+        <rdfs:label xml:lang="en">HoldInteraction</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
