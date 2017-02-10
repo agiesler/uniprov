@@ -16,9 +16,9 @@
         <owl:imports rdf:resource="http://purl.org/net/uniprov/provone#"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:creator>Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
+        <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/documentation/images/uniprov-on-prov-one-uml.png"/>
         <rdfs:seeAlso>http://www.w3.org/ns/prov-o</rdfs:seeAlso>
         <dc:description xml:lang="en">The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</dc:description>
-        <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png"/>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
         <prov:specializationOf xml:lang="en">https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl</prov:specializationOf>
         <dc:date>2017-01-18</dc:date>
@@ -130,7 +130,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hadVariables">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowExec"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#WorkflowVariable"/>
         <rdfs:comment>Enables the specification of workflow parameters/variables.</rdfs:comment>
         <rdfs:label>hadVariable</rdfs:label>
@@ -144,8 +144,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasAnnotation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#UnicoreWorkflow"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobAnnotationsCollection"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#Annotations"/>
         <rdfs:comment xml:lang="en">Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities.</rdfs:comment>
         <rdfs:label>hasAnnotation</rdfs:label>
     </owl:ObjectProperty>
@@ -215,9 +214,9 @@
     <!-- http://www.w3.org/ns/prov#used -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#used">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#EnvironmentVariablesCollection"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobResourcesCollection"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#EnvVariables"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobResources"/>
         <rdfs:comment xml:lang="en">&lt;a href=&quot;http://www.w3.org/TR/2013/REC-prov-o-20130430/#used&quot;
            title=&quot;http://www.w3.org/ns/prov-o#used&quot;&gt;prov:used&lt;/a&gt;
 is adopted in UniProv to state that an Execution made use of a particular Entity item as input for its execution.</rdfs:comment>
@@ -229,7 +228,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
 
     <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowVariable"/>
-        <rdfs:range rdf:resource="http://purl.org/net/uniprov#ModifyVarExecution"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#ModifyVarExec"/>
     </rdf:Description>
     
 
@@ -245,24 +244,10 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#LoopInitialValue -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#LoopInitialValue">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoopExecution"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment xml:lang="en">Represents the initial value of the loop variable.</rdfs:comment>
-        <rdfs:label xml:lang="en">loopInitialValue</rdfs:label>
-        <prov:category xml:lang="en">UNICORE specification</prov:category>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/net/uniprov#batchSystemID -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#batchSystemID">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Id of the used batch system</rdfs:comment>
         <rdfs:label>batchSystemID</rdfs:label>
@@ -274,7 +259,10 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#conditionalExpression -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#conditionalExpression">
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">The conditional expression of a loop construct</rdfs:comment>
         <rdfs:label xml:lang="en">conditionalExpression</rdfs:label>
@@ -286,7 +274,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#dataMoveExecTime -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#dataMoveExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of data movement</rdfs:comment>
         <rdfs:label>dataMoveExecTime</rdfs:label>
@@ -357,7 +345,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#inQueueExecTime -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#inQueueExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of job in queue</rdfs:comment>
         <rdfs:label>inQueueExecTime</rdfs:label>
@@ -369,13 +357,26 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#iteration -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#iteration">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachExecution"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilExec"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoopExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoopExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Describes the iteration step of a loop execution.</rdfs:comment>
         <rdfs:label>iteration</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/uniprov#loopInitialValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#loopInitialValue">
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Represents the initial value of the loop variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">loopInitialValue</rdfs:label>
         <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
@@ -412,7 +413,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#machineInfo -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#machineInfo">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Info of the machine where the job runs</rdfs:comment>
         <rdfs:label>machineInfo</rdfs:label>
@@ -435,7 +436,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#stageInExecTime -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#stageInExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Time of job stageOut operations</rdfs:comment>
         <rdfs:label>stageInExecTime</rdfs:label>
@@ -447,7 +448,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#stageOutExecTime -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#stageOutExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:label>Time of job stageIn operations</rdfs:label>
         <rdfs:label>stageOutExecTime</rdfs:label>
@@ -459,7 +460,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#status -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#status">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>The status of the job</rdfs:comment>
         <rdfs:label>status</rdfs:label>
@@ -471,7 +472,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#totalExecTime -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#totalExecTime">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:isDefinedBy>http://unicore.eu/ns/uniprov#</rdfs:isDefinedBy>
         <rdfs:label>totalExecTime</rdfs:label>
@@ -483,7 +484,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#workflowId -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#workflowId">
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowExecution"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>The unique ID of a UNICORE workflow</rdfs:comment>
         <rdfs:label xml:lang="en">workflowID</rdfs:label>
@@ -503,12 +504,23 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#EnvironmentVariablesCollection -->
+    <!-- http://purl.org/net/uniprov#Annotations -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#EnvironmentVariablesCollection">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#Annotations">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+        <rdfs:comment>A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
+        <rdfs:label>Annotations</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/uniprov#EnvVariables -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov#EnvVariables">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>A collection containing environment variables of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
-        <rdfs:label>EnvironmentVariablesCollection</rdfs:label>
+        <rdfs:label>EnvVariables</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -525,12 +537,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#ForEachExecution -->
+    <!-- http://purl.org/net/uniprov#ForEachExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#ForEachExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#ForEachExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Execution of the Unicore workflow system looping construct allowing to loop a certain part of the workflow for each provided variable, file or dataset.</rdfs:comment>
-        <rdfs:label>ForEachExecution</rdfs:label>
+        <rdfs:label xml:lang="en">ForEachExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -558,12 +570,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#GroupExecution -->
+    <!-- http://purl.org/net/uniprov#GroupExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#GroupExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#GroupExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Execution of a group container</rdfs:comment>
-        <rdfs:label xml:lang="en">GroupExecution</rdfs:label>
+        <rdfs:label xml:lang="en">GroupExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -591,23 +603,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#JobAnnotationsCollection -->
+    <!-- http://purl.org/net/uniprov#JobResources -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#JobAnnotationsCollection">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
-        <rdfs:comment>A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
-        <rdfs:label>JobAnnotationsCollection</rdfs:label>
-        <prov:category>UNICORE specification</prov:category>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/net/uniprov#JobResourcesCollection -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov#JobResourcesCollection">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#JobResources">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:comment>A collection containing environment resources used in a UNICORE job execution.  These constituents are entities and said to be members of the collection.</rdfs:comment>
-        <rdfs:label>JobResourcesCollection</rdfs:label>
+        <rdfs:label>JobResources</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -624,12 +625,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#JobScriptExecution -->
+    <!-- http://purl.org/net/uniprov#JobScriptExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#JobScriptExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#JobScriptExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Represents the execution of an compute job script</rdfs:comment>
-        <rdfs:label>JobScriptExecution</rdfs:label>
+        <rdfs:label>JobScriptExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -646,12 +647,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#ModifyVarExecution -->
+    <!-- http://purl.org/net/uniprov#ModifyVarExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#ModifyVarExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#ModifyVarExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">A ModifyVarExecution changes the value of a workflow variable.</rdfs:comment>
-        <rdfs:label xml:lang="en">ModifyVarExecution</rdfs:label>
+        <rdfs:label xml:lang="en">ModifyVarExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -662,7 +663,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <owl:Class rdf:about="http://purl.org/net/uniprov#RepeatUntilExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
-        <rdfs:label>RepeatUntilExecution</rdfs:label>
+        <rdfs:label>RepeatUntilExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -690,17 +691,6 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#UnicoreWorkflow -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov#UnicoreWorkflow">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Workflow"/>
-        <rdfs:comment xml:lang="en">Represents the UNICORE top level workflow</rdfs:comment>
-        <rdfs:label>UnicoreWorkflow</rdfs:label>
-        <prov:category>UNICORE specification</prov:category>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/net/uniprov#WhileLoop -->
 
     <owl:Class rdf:about="http://purl.org/net/uniprov#WhileLoop">
@@ -712,23 +702,23 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#WhileLoopExecution -->
+    <!-- http://purl.org/net/uniprov#WhileLoopExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#WhileLoopExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#WhileLoopExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
-        <rdfs:label>WhileLoopExecution</rdfs:label>
+        <rdfs:label>WhileLoopExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/uniprov#WorkflowExecution -->
+    <!-- http://purl.org/net/uniprov#WorkflowExec -->
 
-    <owl:Class rdf:about="http://purl.org/net/uniprov#WorkflowExecution">
+    <owl:Class rdf:about="http://purl.org/net/uniprov#WorkflowExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Represents the execution of a whole workflow.</rdfs:comment>
-        <rdfs:label xml:lang="en">WorkflowExecution</rdfs:label>
+        <rdfs:label xml:lang="en">WorkflowExec</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
