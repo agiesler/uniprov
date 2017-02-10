@@ -26,14 +26,6 @@
     <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov#machineInfo"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/uniprov#hasAnnotation">
-    <rdfs:label>hasAnnotation</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities.</rdfs:comment>
-    <rdfs:range rdf:resource="http://purl.org/net/uniprov#Annotations"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/uniprov#status">
     <prov:category xml:lang="en">UNICORE specification</prov:category>
     <rdfs:label>status</rdfs:label>
@@ -170,6 +162,14 @@
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
     <rdfs:range rdf:resource="http://purl.org/net/uniprov#ModifyVarExec"/>
     <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WorkflowVariable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/uniprov#hasAnnotations">
+    <rdfs:label>hasAnnotations</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/net/uniprov#Annotations"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/uniprov#HoldInteraction">
     <prov:category>UNICORE specification</prov:category>

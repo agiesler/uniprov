@@ -139,14 +139,14 @@
     
 
 
-    <!-- http://purl.org/net/uniprov#hasAnnotation -->
+    <!-- http://purl.org/net/uniprov#hasAnnotations -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasAnnotation">
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasAnnotations">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#Annotations"/>
         <rdfs:comment xml:lang="en">Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities.</rdfs:comment>
-        <rdfs:label>hasAnnotation</rdfs:label>
+        <rdfs:label>hasAnnotations</rdfs:label>
     </owl:ObjectProperty>
     
 

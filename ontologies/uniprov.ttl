@@ -8,25 +8,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix provone: <http://purl.dataone.org/provone/2015/01/15/ontology#> .
-@base <http://purl.dataone.org/provone/2015/01/15/ontology#> .
+@prefix provone: <http://purl.org/net/uniprov/provone#> .
+@base <http://purl.org/net/uniprov#> .
 
-<http://purl.dataone.org/provone/2015/01/15/ontology#> rdf:type owl:Ontology ;
-                                                        owl:versionIRI provone:0.1.0 ;
-                                                        owl:imports <http://purl.dataone.org/provone/2015/01/15/ontology#> ;
-                                                        owl:versionInfo 0.1 ;
-                                                        dc:creator "Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany" ;
-                                                        rdfs:seeAlso "http://www.w3.org/ns/prov-o" ;
-                                                        dc:description "The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic."@en ,
-                                                                       <https://rawgit.com/agiesler/uniprov/master/ontologies/UniProvOWL2UML.png> ;
-                                                        dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en ;
-                                                        rdfs:seeAlso "http://purl.dataone.org/provone/2015/01/15/ontology/provone" ;
-                                                        prov:specializationOf "https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl"@en ;
-                                                        dc:date "2017-01-18" ;
-                                                        dc:description ""@en ;
-                                                        dc:creator "Myriam Czekala, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany" ;
-                                                        rdfs:label "UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance" ;
-                                                        rdfs:comment "This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system." .
+<http://purl.org/net/uniprov#> rdf:type owl:Ontology ;
+                                owl:versionIRI :0.1.0 ;
+                                owl:imports provone: ;
+                                dc:description <https://raw.githubusercontent.com/agiesler/uniprov/master/documentation/images/uniprov-on-provone-uml.png> ;
+                                owl:versionInfo 0.1 ;
+                                dc:creator "Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany" ;
+                                rdfs:seeAlso "http://www.w3.org/ns/prov-o" ;
+                                dc:description "The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic."@en ;
+                                dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en ;
+                                prov:specializationOf "https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl"@en ;
+                                dc:date "2017-01-18" ;
+                                dc:description ""@en ;
+                                dc:creator "Myriam Czekala, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany" ;
+                                rdfs:label "UniProv: A PROV Extension for UNICORE Job and Scientific Workflow Provenance" ;
+                                rdfs:seeAlso "http://purl.dataone.org/provone/2015/01/15/ontology#" ;
+                                rdfs:comment "This document explains the ontology for UniProv enabling provenance management in the UNICORE federation system." ;
+                                rdfs:seeAlso "http://jenkins-1.dataone.org/jenkins/view/Documentation%20Projects/job/ProvONE-Documentation-trunk/ws/provenance/ProvONE/v1/provone.html" .
 
 #################################################################
 #    Annotation properties
@@ -76,270 +77,500 @@ rdfs:seeAlso rdf:type owl:AnnotationProperty .
 owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/prov#category
+prov:category rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#hasFromTransition
-provone:hasFromTransition rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy> ;
-                          owl:inverseOf provone:isTransitionFrom ;
-                          rdfs:domain provone:UnicoreJobScript ;
-                          rdfs:range provone:Transition ;
-                          rdfs:comment "A property relating a UnicoreJobScript to the Transition it was started from" ;
-                          rdfs:label "hasFromTransition" .
+###  http://purl.org/net/uniprov#hadVariables
+:hadVariables rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf prov:used ;
+              rdfs:domain :WorkflowExec ;
+              rdfs:range :WorkflowVariable ;
+              rdfs:comment "Enables the specification of workflow parameters/variables." ;
+              rdfs:label "hadVariable" ;
+              prov:category "workflow-specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#hasJobAnnotationsCollection
-provone:hasJobAnnotationsCollection rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                    rdfs:domain provone:UnicoreJobScript ;
-                                    rdfs:range provone:JobAnnotationsCollection ;
-                                    rdfs:comment "Specifies that a given Program (UNICORE script) has a collection of user annotation entities." ;
-                                    rdfs:label "hasJobAnnotationsCollection" .
+###  http://purl.org/net/uniprov#hasAnnotation
+:hasAnnotation rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :JobScript ;
+               rdfs:range :Annotations ;
+               rdfs:comment "Specifies that a given Program (UNICORE workflow or script) has a collection of user annotation entities."@en ;
+               rdfs:label "hasAnnotation" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#hasToTransition
-provone:hasToTransition rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy> ;
-                        owl:inverseOf provone:isTransitionTo ;
-                        rdfs:domain provone:UnicoreJobScript ;
-                        rdfs:range provone:Transition ;
-                        rdfs:comment "Relates a UnicoreJobScript to the succeeding Transition" ;
-                        rdfs:label "hasToTransition" .
+###  http://purl.org/net/uniprov#hasElseTrans
+:hasElseTrans rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf provone:controlledBy ;
+              rdfs:domain :IfStatement ;
+              rdfs:range :Transition ;
+              rdfs:comment "Relates an IfStatement to the transition which represents the Else branch."@en ;
+              rdfs:label "hasElseTrans"@en ;
+              prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionFrom
-provone:isTransitionFrom rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls> ;
-                         rdfs:domain provone:Transition ;
-                         rdfs:range provone:UnicoreJobScript ;
-                         rdfs:label "isTransitionFrom" .
+###  http://purl.org/net/uniprov#hasFromTrans
+:hasFromTrans rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf provone:controlledBy ;
+              rdfs:domain :JobScript ;
+              rdfs:range :Transition ;
+              rdfs:comment "A property relating a UnicoreJobScript to the Transition it was started from" ;
+              rdfs:label "hasFromTrans" ;
+              prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#isTransitionTo
-provone:isTransitionTo rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls> ;
-                       rdfs:domain provone:Transition ;
-                       rdfs:range provone:UnicoreJobScript ;
-                       rdfs:label "isTransitionTo" .
+###  http://purl.org/net/uniprov#hasIfTrans
+:hasIfTrans rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf provone:controlledBy ;
+            rdfs:domain :IfStatement ;
+            rdfs:range :Transition ;
+            rdfs:comment "Relates an IfStatement to the transition which represents the If branch."@en ;
+            rdfs:label "hasIfTrans"@en ;
+            prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#controlledBy> rdf:type owl:ObjectProperty .
+###  http://purl.org/net/uniprov#hasToTrans
+:hasToTrans rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf provone:controlledBy ;
+            rdfs:domain :JobScript ;
+            rdfs:range :Transition ;
+            rdfs:comment "Relates a UnicoreJobScript to the succeeding Transition" ;
+            rdfs:label "hasToTrans" ;
+            prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#controls> rdf:type owl:ObjectProperty .
+###  http://purl.org/net/uniprov#isTransFrom
+:isTransFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf provone:controls ;
+             rdfs:domain :Transition ;
+             rdfs:range :JobScript ;
+             rdfs:label "isTransFrom" .
+
+
+###  http://purl.org/net/uniprov#isTransTo
+:isTransTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf provone:controls ;
+           rdfs:domain :Transition ;
+           rdfs:range :JobScript ;
+           rdfs:label "isTransTo" .
+
+
+###  http://purl.org/net/uniprov/provone#controlledBy
+provone:controlledBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/uniprov/provone#controls
+provone:controls rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#used
+prov:used rdfs:domain :JobScriptExec ;
+          rdfs:range :EnvVariables ,
+                     :JobResources ;
+          rdfs:comment """<a href=\"http://www.w3.org/TR/2013/REC-prov-o-20130430/#used\"
+           title=\"http://www.w3.org/ns/prov-o#used\">prov:used</a>
+is adopted in UniProv to state that an Execution made use of a particular Entity item as input for its execution."""@en .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdfs:domain :WorkflowVariable ;
+                    rdfs:range :ModifyVarExec .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#ErrorMessage
-provone:ErrorMessage rdf:type owl:DatatypeProperty ;
-                     rdfs:domain provone:ErrorReport ;
+###  http://purl.org/net/uniprov#batchSystemID
+:batchSystemID rdf:type owl:DatatypeProperty ;
+               rdfs:domain :JobScriptExec ;
+               rdfs:range rdf:PlainLiteral ;
+               rdfs:comment "Id of the used batch system" ;
+               rdfs:label "batchSystemID" ;
+               prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#conditionalExpression
+:conditionalExpression rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ForEachLoop ,
+                                   :RepeatUntilLoop ,
+                                   :Transition ,
+                                   :WhileLoop ;
+                       rdfs:range rdf:PlainLiteral ;
+                       rdfs:comment "The conditional expression of a loop construct"@en ;
+                       rdfs:label "conditionalExpression"@en ;
+                       prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#dataMoveExecTime
+:dataMoveExecTime rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :JobScriptExec ;
+                  rdfs:range rdf:PlainLiteral ;
+                  rdfs:comment "Time of data movement" ;
+                  rdfs:label "dataMoveExecTime" ;
+                  prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#errorMessage
+:errorMessage rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ErrorReport ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:comment "Delivers the error message" ;
+              prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#forEachIterSize
+:forEachIterSize rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ForEachLoop ;
+                 rdfs:range rdf:PlainLiteral ;
+                 rdfs:comment "Represents the iteration size."@en ;
+                 rdfs:label "forEachIterSize"@en ;
+                 prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#forEachIterSizeType
+:forEachIterSizeType rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ForEachLoop ;
                      rdfs:range rdf:PlainLiteral ;
-                     rdfs:comment "Delivers the error message" .
+                     rdfs:comment "Represents the type of the iteration size (Nr of files or chunk size in kbytes)."@en ;
+                     rdfs:label "forEachIterSizeType"@en ;
+                     prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#Stacktrace
-provone:Stacktrace rdf:type owl:DatatypeProperty ;
-                   rdfs:domain provone:ErrorReport ;
-                   rdfs:range rdf:PlainLiteral ;
-                   rdfs:comment "Delivers the stack trace of the provenance process error" .
+###  http://purl.org/net/uniprov#forEachIterateType
+:forEachIterateType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ForEachLoop ;
+                    rdfs:range rdf:PlainLiteral ;
+                    rdfs:comment "Specifies the type for the loop iteration."@en ;
+                    rdfs:label "forEachIterateType"@en ;
+                    prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#batchSystemID
-provone:batchSystemID rdf:type owl:DatatypeProperty ;
-                      rdfs:domain provone:UnicoreJobExecution ;
-                      rdfs:comment "Id of the used batch system" ;
-                      rdfs:label "batchSystemID" .
+###  http://purl.org/net/uniprov#forEachNrOfParTasks
+:forEachNrOfParTasks rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ForEachLoop ;
+                     rdfs:range rdf:PlainLiteral ;
+                     rdfs:comment "Represents the number of parallel tasks in a for-each loop."@en ;
+                     rdfs:label "forEachNrOfParTasks"@en ;
+                     prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#conditionalExpression
-provone:conditionalExpression rdf:type owl:DatatypeProperty ;
-                              rdfs:domain provone:Transition .
+###  http://purl.org/net/uniprov#inQueueExecTime
+:inQueueExecTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :JobScriptExec ;
+                 rdfs:range rdf:PlainLiteral ;
+                 rdfs:comment "Time of job in queue" ;
+                 rdfs:label "inQueueExecTime" ;
+                 prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#dataMoveExecTime
-provone:dataMoveExecTime rdf:type owl:DatatypeProperty ;
-                         rdfs:domain provone:UnicoreJobExecution ;
-                         rdfs:comment "Time of data movement" ;
-                         rdfs:label "dataMoveExecTime" .
+###  http://purl.org/net/uniprov#iteration
+:iteration rdf:type owl:DatatypeProperty ;
+           rdfs:domain :JobScriptExec ,
+                       :RepeatUntilExec ,
+                       :WhileLoopExec ;
+           rdfs:range rdf:PlainLiteral ;
+           rdfs:comment "Describes the iteration step of a loop execution."@en ;
+           rdfs:label "iteration" ;
+           prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#inQueueExecTime
-provone:inQueueExecTime rdf:type owl:DatatypeProperty ;
-                        rdfs:domain provone:UnicoreJobExecution ;
-                        rdfs:comment "Time of job in queue" ;
-                        rdfs:label "inQueueExecTime" .
+###  http://purl.org/net/uniprov#loopInitialValue
+:loopInitialValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ForEachLoop ,
+                              :RepeatUntilLoop ,
+                              :WhileLoop ;
+                  rdfs:range rdf:PlainLiteral ;
+                  rdfs:comment "Represents the initial value of the loop variable."@en ;
+                  rdfs:label "loopInitialValue"@en ;
+                  prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#machineInfo
-provone:machineInfo rdf:type owl:DatatypeProperty ;
-                    rdfs:domain provone:UnicoreJobExecution ;
-                    rdfs:comment "Info of the machine where the job runs" ;
-                    rdfs:label "machineInfo" .
+###  http://purl.org/net/uniprov#loopModifier
+:loopModifier rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ForEachLoop ,
+                          :RepeatUntilLoop ,
+                          :WhileLoop ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:comment "Represents an expression to modify the value of the variable."@en ;
+              rdfs:label "loopModifier" ;
+              prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#stageInExecTime
-provone:stageInExecTime rdf:type owl:DatatypeProperty ;
-                        rdfs:domain provone:UnicoreJobExecution ;
-                        rdfs:comment "Time of job stageOut operations" ;
-                        rdfs:label "stageInExecTime" .
+###  http://purl.org/net/uniprov#loopVariable
+:loopVariable rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :machineInfo ;
+              rdfs:domain :ForEachLoop ,
+                          :RepeatUntilLoop ,
+                          :WhileLoop ;
+              rdfs:range rdf:PlainLiteral ;
+              rdfs:label "loopVariable" ;
+              prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#stageOutExecTime
-provone:stageOutExecTime rdf:type owl:DatatypeProperty ;
-                         rdfs:domain provone:UnicoreJobExecution ;
-                         rdfs:label "Time of job stageIn operations" ,
-                                    "stageOutExecTime" .
+###  http://purl.org/net/uniprov#machineInfo
+:machineInfo rdf:type owl:DatatypeProperty ;
+             rdfs:domain :JobScriptExec ;
+             rdfs:range rdf:PlainLiteral ;
+             rdfs:comment "Info of the machine where the job runs" ;
+             rdfs:label "machineInfo" ;
+             prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#status
-provone:status rdf:type owl:DatatypeProperty ;
-               rdfs:domain provone:UnicoreJobExecution ;
-               rdfs:comment "The status of the job" ;
-               rdfs:label "status" .
+###  http://purl.org/net/uniprov#stacktrace
+:stacktrace rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ErrorReport ;
+            rdfs:range rdf:PlainLiteral ;
+            rdfs:comment "Delivers the stack trace of the provenance process error" ;
+            prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#totalExecTime
-provone:totalExecTime rdf:type owl:DatatypeProperty ;
-                      rdfs:domain provone:UnicoreJobExecution ;
-                      rdfs:isDefinedBy "http://unicore.eu/ns/uniprov#" ;
-                      rdfs:label "totalExecTime" .
+###  http://purl.org/net/uniprov#stageInExecTime
+:stageInExecTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :JobScriptExec ;
+                 rdfs:range rdf:PlainLiteral ;
+                 rdfs:comment "Time of job stageOut operations" ;
+                 rdfs:label "stageInExecTime" ;
+                 prov:category "UNICORE specification"@en .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#workflowID
-provone:workflowID rdf:type owl:DatatypeProperty ;
-                   rdfs:domain provone:UnicoreWorkflow ;
-                   rdfs:range rdfs:Literal ;
-                   rdfs:comment "The unique ID of a UNICORE workflow" .
+###  http://purl.org/net/uniprov#stageOutExecTime
+:stageOutExecTime rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :JobScriptExec ;
+                  rdfs:range rdf:PlainLiteral ;
+                  rdfs:label "Time of job stageIn operations" ,
+                             "stageOutExecTime" ;
+                  prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:domain :JobScriptExec ;
+        rdfs:range rdf:PlainLiteral ;
+        rdfs:comment "The status of the job" ;
+        rdfs:label "status" ;
+        prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#totalExecTime
+:totalExecTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain :JobScriptExec ;
+               rdfs:range rdf:PlainLiteral ;
+               rdfs:isDefinedBy "http://unicore.eu/ns/uniprov#" ;
+               rdfs:label "totalExecTime" ;
+               prov:category "UNICORE specification"@en .
+
+
+###  http://purl.org/net/uniprov#workflowId
+:workflowId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :WorkflowExec ;
+            rdfs:range rdf:PlainLiteral ;
+            rdfs:comment "The unique ID of a UNICORE workflow" ;
+            rdfs:label "workflowID"@en ;
+            prov:category "UNICORE specification"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#EnvironmentVariablesCollection
-provone:EnvironmentVariablesCollection rdf:type owl:Class ;
-                                       rdfs:subClassOf prov:Collection ;
-                                       rdfs:comment "A collection containing environment variables of a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
-                                       rdfs:label "EnvironmentVariablesCollection" ;
-                                       prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#Annotations
+:Annotations rdf:type owl:Class ;
+             rdfs:subClassOf prov:Collection ;
+             rdfs:comment "A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
+             rdfs:label "Annotations" ;
+             prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#ErrorReport
-provone:ErrorReport rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document> ;
-                    rdfs:comment "Provides error information if something went wrong during the provenance generation process" ;
-                    rdfs:label "ErrorReport" ;
-                    prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#EnvVariables
+:EnvVariables rdf:type owl:Class ;
+              rdfs:subClassOf prov:Collection ;
+              rdfs:comment "A collection containing environment variables of a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
+              rdfs:label "EnvVariables" ;
+              prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#JobAnnotationsCollection
-provone:JobAnnotationsCollection rdf:type owl:Class ;
-                                 rdfs:subClassOf prov:Collection ;
-                                 rdfs:comment "A collection containing user annotations of a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
-                                 rdfs:label "JobAnnotationsCollection" ;
-                                 prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#ErrorReport
+:ErrorReport rdf:type owl:Class ;
+             rdfs:subClassOf provone:Document ;
+             rdfs:comment "Provides error information if something went wrong during the provenance generation process" ;
+             rdfs:label "ErrorReport" ;
+             prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#JobResourcesCollection
-provone:JobResourcesCollection rdf:type owl:Class ;
-                               rdfs:subClassOf prov:Collection ;
-                               rdfs:comment "A collection containing environment resources used in a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
-                               rdfs:label "JobResourcesCollection" ;
-                               prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#ForEachExec
+:ForEachExec rdf:type owl:Class ;
+             rdfs:subClassOf provone:Execution ;
+             rdfs:comment "Execution of the Unicore workflow system looping construct allowing to loop a certain part of the workflow for each provided variable, file or dataset."@en ;
+             rdfs:label "ForEachExec"@en ;
+             prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#Transition
-provone:Transition rdf:type owl:Class ;
-                   rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller> ;
-                   rdfs:comment "A transition links parts of the workflow." ;
-                   rdfs:label "Transition" ;
-                   prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#ForEachLoop
+:ForEachLoop rdf:type owl:Class ;
+             rdfs:subClassOf provone:Program ;
+             rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow for each provided variable, file or dataset."@en ;
+             rdfs:label "ForEachLoop" ;
+             prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreForEachLoop
-provone:UnicoreForEachLoop rdf:type owl:Class ;
-                           rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution> ;
-                           rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met." ;
-                           rdfs:label "UnicoreForEachLoop" ;
-                           prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#Group
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf provone:Program ;
+       rdfs:comment "A group is a container for other UNICORE activities."@en ;
+       rdfs:label "Group"@en ;
+       prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobExecution
-provone:UnicoreJobExecution rdf:type owl:Class ;
-                            rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution> ;
-                            rdfs:comment "Represents the execution of an UNICORE job script" ;
-                            rdfs:isDefinedBy "http://purl.dataone.org/provone/2015/01/15/ontology#" ;
-                            rdfs:label "UnicoreJobExecution" ;
-                            prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#GroupExec
+:GroupExec rdf:type owl:Class ;
+           rdfs:subClassOf provone:Execution ;
+           rdfs:comment "Execution of a group container"@en ;
+           rdfs:label "GroupExec"@en ;
+           prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreJobScript
-provone:UnicoreJobScript rdf:type owl:Class ;
-                         rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program> ;
-                         rdfs:comment "Extends the provone:Program by Unicore specific features" ;
-                         rdfs:label "UnicoreJobScript" ;
-                         prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#Hold
+:Hold rdf:type owl:Class ;
+      rdfs:subClassOf provone:Program ;
+      rdfs:comment "Contains a hold of the workflow"@en ;
+      rdfs:label "Hold"@en ;
+      prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreRepeatUntilLoop
-provone:UnicoreRepeatUntilLoop rdf:type owl:Class ;
-                               rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution> ;
-                               rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met." ;
-                               rdfs:label "UnicoreRepeatUntilLoop" ;
-                               prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#HoldInteraction
+:HoldInteraction rdf:type owl:Class ;
+                 rdfs:subClassOf provone:Execution ;
+                 rdfs:comment "Waits for user interaction"@en ;
+                 rdfs:label "HoldInteraction"@en ;
+                 prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreSubWorkflow
-provone:UnicoreSubWorkflow rdf:type owl:Class ;
-                           rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow> ;
-                           rdfs:label "UnicoreSubWorkflow" ;
-                           prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#IfStatement
+:IfStatement rdf:type owl:Class ;
+             rdfs:subClassOf provone:Program ;
+             rdfs:comment "This statement can have multiple outgoing transitions. The transition with the first matching condition will be followed. This is comparable to an \"if() … else()\" construct in a programming language."@en ;
+             rdfs:label "IfStatement"@en ;
+             prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWhileLoop
-provone:UnicoreWhileLoop rdf:type owl:Class ;
-                         rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution> ;
-                         rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met." ;
-                         rdfs:label "UnicoreWhileLoop" ;
-                         prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#JobResources
+:JobResources rdf:type owl:Class ;
+              rdfs:subClassOf prov:Collection ;
+              rdfs:comment "A collection containing environment resources used in a UNICORE job execution.  These constituents are entities and said to be members of the collection." ;
+              rdfs:label "JobResources" ;
+              prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology#UnicoreWorkflow
-provone:UnicoreWorkflow rdf:type owl:Class ;
-                        rdfs:subClassOf <http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow> ;
-                        rdfs:label "UnicoreWorkflow" ;
-                        prov:category "UNICORE specification" .
+###  http://purl.org/net/uniprov#JobScript
+:JobScript rdf:type owl:Class ;
+           rdfs:subClassOf provone:Program ;
+           rdfs:comment "Contains the script input of a singel compute job"@en ;
+           rdfs:label "JobScript" ;
+           prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#Controller> rdf:type owl:Class .
+###  http://purl.org/net/uniprov#JobScriptExec
+:JobScriptExec rdf:type owl:Class ;
+               rdfs:subClassOf provone:Execution ;
+               rdfs:comment "Represents the execution of an compute job script"@en ;
+               rdfs:label "JobScriptExec" ;
+               prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#Document> rdf:type owl:Class .
+###  http://purl.org/net/uniprov#ModifyVar
+:ModifyVar rdf:type owl:Class ;
+           rdfs:subClassOf provone:Program ;
+           rdfs:comment "A ModifyVar expression can be used to change the value of a workflow variable."@en ;
+           rdfs:label "ModifyVar"@en ;
+           prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#Execution> rdf:type owl:Class .
+###  http://purl.org/net/uniprov#ModifyVarExec
+:ModifyVarExec rdf:type owl:Class ;
+               rdfs:subClassOf provone:Execution ;
+               rdfs:comment "A ModifyVarExecution changes the value of a workflow variable."@en ;
+               rdfs:label "ModifyVarExec"@en ;
+               prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#Program> rdf:type owl:Class .
+###  http://purl.org/net/uniprov#RepeatUntilExec
+:RepeatUntilExec rdf:type owl:Class ;
+                 rdfs:subClassOf provone:Execution ;
+                 rdfs:comment "Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met."@en ;
+                 rdfs:label "RepeatUntilExec" ;
+                 prov:category "UNICORE specification" .
 
 
-###  http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow
-<http://purl.dataone.org/provone/2015/01/15/ontology/provone#Workflow> rdf:type owl:Class .
+###  http://purl.org/net/uniprov#RepeatUntilLoop
+:RepeatUntilLoop rdf:type owl:Class ;
+                 rdfs:subClassOf provone:Program ;
+                 rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met."@en ;
+                 rdfs:label "RepeatUntilLoop" ;
+                 prov:category "UNICORE specification" .
 
 
-###  http://www.w3.org/ns/prov#Collection
-prov:Collection rdf:type owl:Class .
+###  http://purl.org/net/uniprov#Transition
+:Transition rdf:type owl:Class ;
+            rdfs:subClassOf provone:Controller ;
+            rdfs:comment "A transition links parts of the workflow." ;
+            rdfs:label "Transition" ;
+            prov:category "UNICORE specification" .
+
+
+###  http://purl.org/net/uniprov#WhileLoop
+:WhileLoop rdf:type owl:Class ;
+           rdfs:subClassOf provone:Program ;
+           rdfs:comment "Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met."@en ;
+           rdfs:label "WhileLoop" ;
+           prov:category "UNICORE specification" .
+
+
+###  http://purl.org/net/uniprov#WhileLoopExec
+:WhileLoopExec rdf:type owl:Class ;
+               rdfs:subClassOf provone:Execution ;
+               rdfs:comment "Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met."@en ;
+               rdfs:label "WhileLoopExec" ;
+               prov:category "UNICORE specification" .
+
+
+###  http://purl.org/net/uniprov#WorkflowExec
+:WorkflowExec rdf:type owl:Class ;
+              rdfs:subClassOf provone:Execution ;
+              rdfs:comment "Represents the execution of a whole workflow."@en ;
+              rdfs:label "WorkflowExec"@en ;
+              prov:category "UNICORE specification" .
+
+
+###  http://purl.org/net/uniprov#WorkflowVariable
+:WorkflowVariable rdf:type owl:Class ;
+                  rdfs:subClassOf prov:Entity ;
+                  rdfs:label "WorkflowVariable"@en .
+
+
+###  http://purl.org/net/uniprov/provone#Controller
+provone:Controller rdf:type owl:Class .
+
+
+###  http://purl.org/net/uniprov/provone#Document
+provone:Document rdf:type owl:Class .
+
+
+###  http://purl.org/net/uniprov/provone#Execution
+provone:Execution rdf:type owl:Class .
+
+
+###  http://purl.org/net/uniprov/provone#Program
+provone:Program rdf:type owl:Class .
+
+
+###  http://purl.org/net/uniprov/provone#Workflow
+provone:Workflow rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
