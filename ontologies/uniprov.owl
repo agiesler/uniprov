@@ -14,9 +14,9 @@
     <owl:Ontology rdf:about="http://purl.org/net/uniprov#">
         <owl:versionIRI rdf:resource="http://purl.org/net/uniprov#0.1.0"/>
         <owl:imports rdf:resource="http://purl.org/net/uniprov/provone#"/>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/agiesler/uniprov/master/documentation/images/uniprov-on-provone-uml.png"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
         <dc:creator>Andre Giesler, Juelich Supercomputing Centre, Forschungszentrum Juelich GmbH, Germany</dc:creator>
-        <dc:description rdf:resource="https://rawgit.com/agiesler/uniprov/master/documentation/images/uniprov-on-prov-one-uml.png"/>
         <rdfs:seeAlso>http://www.w3.org/ns/prov-o</rdfs:seeAlso>
         <dc:description xml:lang="en">The UniProv ontology extends the W3C PROV data model and the workflow extension PROVONE by defining a vocabulary for UNICORE (http://unicore.eu) specific job and workflow logic.</dc:description>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
@@ -151,50 +151,76 @@
     
 
 
-    <!-- http://purl.org/net/uniprov#hasFromTransition -->
+    <!-- http://purl.org/net/uniprov#hasElseTrans -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasFromTransition">
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasElseTrans">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/uniprov#isTransitionFrom"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#IfStatement"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
+        <rdfs:comment xml:lang="en">Relates an IfStatement to the transition which represents the Else branch.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasElseTrans</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/uniprov#hasFromTrans -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasFromTrans">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:comment>A property relating a UnicoreJobScript to the Transition it was started from</rdfs:comment>
-        <rdfs:label>hasFromTransition</rdfs:label>
+        <rdfs:label>hasFromTrans</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#hasToTransition -->
+    <!-- http://purl.org/net/uniprov#hasIfTrans -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasToTransition">
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasIfTrans">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/uniprov#isTransitionTo"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#IfStatement"/>
+        <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
+        <rdfs:comment xml:lang="en">Relates an IfStatement to the transition which represents the If branch.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasIfTrans</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/uniprov#hasToTrans -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#hasToTrans">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controlledBy"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScript"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:comment>Relates a UnicoreJobScript to the succeeding Transition</rdfs:comment>
-        <rdfs:label>hasToTransition</rdfs:label>
+        <rdfs:label>hasToTrans</rdfs:label>
+        <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#isTransitionFrom -->
+    <!-- http://purl.org/net/uniprov#isTransFrom -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransitionFrom">
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransFrom">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controls"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobScript"/>
-        <rdfs:label>isTransitionFrom</rdfs:label>
+        <rdfs:label>isTransFrom</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/uniprov#isTransitionTo -->
+    <!-- http://purl.org/net/uniprov#isTransTo -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransitionTo">
+    <owl:ObjectProperty rdf:about="http://purl.org/net/uniprov#isTransTo">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/net/uniprov/provone#controls"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:range rdf:resource="http://purl.org/net/uniprov#JobScript"/>
-        <rdfs:label>isTransitionTo</rdfs:label>
+        <rdfs:label>isTransTo</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -598,6 +624,17 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Waits for user interaction</rdfs:comment>
         <rdfs:label xml:lang="en">HoldInteraction</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/uniprov#IfStatement -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov#IfStatement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Program"/>
+        <rdfs:comment xml:lang="en">This statement can have multiple outgoing transitions. The transition with the first matching condition will be followed. This is comparable to an &quot;if() … else()&quot; construct in a programming language.</rdfs:comment>
+        <rdfs:label xml:lang="en">IfStatement</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     

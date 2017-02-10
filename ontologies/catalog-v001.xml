@@ -7,9 +7,9 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/net/uniprov/provone#" uri="provone.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="https://raw.githubusercontent.com/agiesler/uniprov/master/ontologies/provone.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1486720513007" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="provone-production.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1486720513007" name="duplicate:http://purl.org/net/uniprov" uri="uniprov-production.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1486720513007" name="duplicate:http://purl.org/net/uniprov" uri="uniprov.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1486720513007" name="http://purl.org/net/uniprov/provone" uri="provone.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486733322614" name="http://purl.dataone.org/provone/2015/01/15/ontology#" uri="provone-production.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486733322614" name="duplicate:http://purl.org/net/uniprov" uri="uniprov-production.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486733322614" name="duplicate:http://purl.org/net/uniprov" uri="uniprov.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486733322614" name="http://purl.org/net/uniprov/provone" uri="provone.owl"/>
     </group>
 </catalog>
