@@ -270,13 +270,13 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#batchSystemID -->
+    <!-- http://purl.org/net/uniprov#batchSystemId -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#batchSystemID">
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#batchSystemId">
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment>Id of the used batch system</rdfs:comment>
-        <rdfs:label>batchSystemID</rdfs:label>
+        <rdfs:label>batchSystemId</rdfs:label>
         <prov:category xml:lang="en">UNICORE specification</prov:category>
     </owl:DatatypeProperty>
     
@@ -286,6 +286,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#conditionalExpression">
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#IfStatement"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>

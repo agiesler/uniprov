@@ -453,7 +453,9 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasElseTrans" title="http://purl.org/net/uniprov#hasElseTrans">hasElseTrans</a>
+            <a href="#conditionalExpression"
+               title="http://purl.org/net/uniprov#conditionalExpression">conditionalExpression</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasElseTrans" title="http://purl.org/net/uniprov#hasElseTrans">hasElseTrans</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasIfTrans" title="http://purl.org/net/uniprov#hasIfTrans">hasIfTrans</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -530,7 +532,7 @@ This section provides details for each class and property defined by UniProv: A 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#batchSystemID" title="http://purl.org/net/uniprov#batchSystemID">batchSystemID</a>
+            <a href="#batchSystemId" title="http://purl.org/net/uniprov#batchSystemId">batchSystemId</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#dataMoveExecTime" title="http://purl.org/net/uniprov#dataMoveExecTime">dataMoveExecTime</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#inQueueExecTime" title="http://purl.org/net/uniprov#inQueueExecTime">inQueueExecTime</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#iteration" title="http://purl.org/net/uniprov#iteration">iteration</a>
@@ -1767,7 +1769,7 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
    <h3 id="dataproperties" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#batchSystemID" title="http://purl.org/net/uniprov#batchSystemID">batchSystemID</a>
+         <a href="#batchSystemId" title="http://purl.org/net/uniprov#batchSystemId">batchSystemId</a>
       </li>
       <li>
          <a href="#conditionalExpression"
@@ -1832,13 +1834,13 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
          <a href="#workflowId" title="http://purl.org/net/uniprov#workflowId">workflowID</a>
       </li>
    </ul>
-   <div class="entity" id="batchSystemID">
-      <h3>batchSystemID<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="batchSystemId">
+      <h3>batchSystemId<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/net/uniprov#batchSystemID</p>
+         <strong>IRI:</strong> http://purl.org/net/uniprov#batchSystemId</p>
       <div class="comment">
          <span class="markdown">Id of the used batch system</span>
       </div>
@@ -1872,6 +1874,10 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
             <dt>has domain</dt>
             <dd>
                <a href="#ForEachLoop" title="http://purl.org/net/uniprov#ForEachLoop">ForEachLoop</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#IfStatement" title="http://purl.org/net/uniprov#IfStatement">IfStatement</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>

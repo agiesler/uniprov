@@ -58,14 +58,6 @@
     <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ErrorReport"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/uniprov#batchSystemID">
-    <prov:category xml:lang="en">UNICORE specification</prov:category>
-    <rdfs:label>batchSystemID</rdfs:label>
-    <rdfs:comment>Id of the used batch system</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -140,15 +132,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/uniprov#conditionalExpression">
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
     <prov:category xml:lang="en">UNICORE specification</prov:category>
-    <rdfs:label xml:lang="en">conditionalExpression</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
     <rdfs:comment xml:lang="en">The conditional expression of a loop construct</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#Transition"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#IfStatement"/>
+    <rdfs:label xml:lang="en">conditionalExpression</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/uniprov#hasIfTrans">
     <prov:category xml:lang="en">UNICORE specification</prov:category>
@@ -389,6 +382,14 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoop"/>
     <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilLoop"/>
     <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachLoop"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/uniprov#batchSystemId">
+    <prov:category xml:lang="en">UNICORE specification</prov:category>
+    <rdfs:label>batchSystemId</rdfs:label>
+    <rdfs:comment>Id of the used batch system</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/uniprov#RepeatUntilLoop">

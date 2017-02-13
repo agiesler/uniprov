@@ -340,15 +340,15 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1837"
-     inkscape:window-height="1173"
+     inkscape:window-height="1053"
      id="namedview4073"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="1.3101562"
-     inkscape:cx="948.63294"
-     inkscape:cy="273.21235"
-     inkscape:window-x="1671"
+     inkscape:zoom="3.7056813"
+     inkscape:cx="773.78378"
+     inkscape:cy="142.09105"
+     inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="provone-model"
@@ -2074,7 +2074,7 @@
         <polyline
            id="Path-45"
            points="222.80557256937027,380.2613220214844 222.80557256937027,425.9342956542969 322.80557256937027,425.9342956542969 322.80557256937027,465.9952087402344 "
-           style="stroke:#4a4a4a"
+           style="stroke:#4a4a4a;stroke-width:0.99980296;stroke-miterlimit:4;stroke-dasharray:none"
            transform="matrix(1.0018014,0,0,1.0600109,0.50552993,-23.276181)" />
         <polyline
            id="Path-40"
@@ -2483,7 +2483,7 @@
         <g
            style="vector-effect:non-scaling-stroke;fill:none;fill-rule:evenodd"
            id="Collection-Box-+-Collection-5"
-           transform="matrix(0.98546568,0,0,1.0017803,45.551373,504.83837)">
+           transform="matrix(0.98877753,0,0,1.0017742,43.326852,504.83849)">
           <text
              transform="matrix(1,0,0,0.911806,0,92.931)"
              id="«Collection»-2"
