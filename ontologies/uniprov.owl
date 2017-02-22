@@ -384,9 +384,10 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov#iteration -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/net/uniprov#iteration">
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#ForEachExec"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#JobScriptExec"/>
         <rdfs:domain rdf:resource="http://purl.org/net/uniprov#RepeatUntilExec"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileLoopExec"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/uniprov#WhileExec"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <rdfs:comment xml:lang="en">Describes the iteration step of a loop execution.</rdfs:comment>
         <rdfs:label>iteration</rdfs:label>
@@ -729,23 +730,23 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     
 
 
-    <!-- http://purl.org/net/uniprov#WhileLoop -->
-
-    <owl:Class rdf:about="http://purl.org/net/uniprov#WhileLoop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Program"/>
-        <rdfs:comment xml:lang="en">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
-        <rdfs:label>WhileLoop</rdfs:label>
-        <prov:category>UNICORE specification</prov:category>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/net/uniprov#WhileExec -->
 
     <owl:Class rdf:about="http://purl.org/net/uniprov#WhileExec">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Execution"/>
         <rdfs:comment xml:lang="en">Execution of Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
         <rdfs:label>WhileExec</rdfs:label>
+        <prov:category>UNICORE specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/uniprov#WhileLoop -->
+
+    <owl:Class rdf:about="http://purl.org/net/uniprov#WhileLoop">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/uniprov/provone#Program"/>
+        <rdfs:comment xml:lang="en">Unicore workflow system looping construct allowing to loop a certain part of the workflow while (or until) a condition is met.</rdfs:comment>
+        <rdfs:label>WhileLoop</rdfs:label>
         <prov:category>UNICORE specification</prov:category>
     </owl:Class>
     
@@ -798,6 +799,12 @@ is adopted in UniProv to state that an Execution made use of a particular Entity
     <!-- http://purl.org/net/uniprov/provone#Workflow -->
 
     <owl:Class rdf:about="http://purl.org/net/uniprov/provone#Workflow"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Collection"/>
 </rdf:RDF>
 
 
