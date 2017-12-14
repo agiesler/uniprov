@@ -16,7 +16,7 @@
    id="svg4071"
    sodipodi:docname="uniprov-on-provone-uml.svg"
    inkscape:version="0.92.0 r15299"
-   inkscape:export-filename="C:\Users\agiesler\Documents\GitHub\uniprov\documentation\images\uniprov-on-provone-uml.png"
+   inkscape:export-filename="C:\Users\agiesler\FZJ\FSD-Miniprojekt-Provenance\ontologies\uniprov-on-provone.svg.png"
    inkscape:export-xdpi="180"
    inkscape:export-ydpi="180">
   <metadata
@@ -339,16 +339,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1837"
-     inkscape:window-height="1053"
+     inkscape:window-width="1843"
+     inkscape:window-height="1173"
      id="namedview4073"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="3.7056813"
-     inkscape:cx="773.78378"
-     inkscape:cy="142.09105"
-     inkscape:window-x="-9"
+     inkscape:zoom="0.92642033"
+     inkscape:cx="624.23686"
+     inkscape:cy="277.29782"
+     inkscape:window-x="1911"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="provone-model"
@@ -964,7 +964,7 @@
              sodipodi:role="line"
              id="tspan4083"
              x="175.23433"
-             y="496.31036">hasFromTrans</tspan>
+             y="496.31036">isTransTo</tspan>
           <tspan
              sodipodi:role="line"
              x="175.23433"
@@ -2074,7 +2074,7 @@
         <polyline
            id="Path-45"
            points="222.80557256937027,380.2613220214844 222.80557256937027,425.9342956542969 322.80557256937027,425.9342956542969 322.80557256937027,465.9952087402344 "
-           style="stroke:#4a4a4a;stroke-width:0.99980296;stroke-miterlimit:4;stroke-dasharray:none"
+           style="stroke:#4a4a4a"
            transform="matrix(1.0018014,0,0,1.0600109,0.50552993,-23.276181)" />
         <polyline
            id="Path-40"
@@ -2401,21 +2401,6 @@
         </g>
         <g
            style="vector-effect:non-scaling-stroke;fill:none;fill-rule:evenodd"
-           id="g12289-8-3"
-           transform="rotate(-90,168.56635,412.03314)">
-          <path
-             inkscape:connector-curvature="0"
-             id="path12270-2-7"
-             d="m 97.04157,406.94637 3.08349,-8.67572 3.79094,8.67572"
-             style="fill:none;stroke:#4a4a4a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <path
-             style="vector-effect:non-scaling-stroke;fill:#4a4a4a;fill-rule:evenodd;stroke:#4a4a4a;stroke-width:1.00045407"
-             inkscape:connector-curvature="0"
-             id="Oval-7-7-1-1"
-             d="m 100.12506,398.27065 c 1.65539,0 2.99739,-1.22685 2.99739,-2.74028 0,-1.51341 -1.342,-2.74029 -2.99739,-2.74029 -1.655411,0 -2.997389,1.22689 -2.997389,2.74029 0,1.51343 1.341978,2.74028 2.997389,2.74028 z" />
-        </g>
-        <g
-           style="vector-effect:non-scaling-stroke;fill:none;fill-rule:evenodd"
            id="g12289-8-0"
            transform="rotate(-90,176.38985,420.23827)">
           <path
@@ -2483,7 +2468,7 @@
         <g
            style="vector-effect:non-scaling-stroke;fill:none;fill-rule:evenodd"
            id="Collection-Box-+-Collection-5"
-           transform="matrix(0.98877753,0,0,1.0017742,43.326852,504.83849)">
+           transform="matrix(0.98546568,0,0,1.0017803,45.551373,504.83837)">
           <text
              transform="matrix(1,0,0,0.911806,0,92.931)"
              id="«Collection»-2"
@@ -2855,6 +2840,36 @@
              inkscape:connector-curvature="0"
              id="Oval-7-7-1-1-2-0"
              d="m 100.12506,398.27065 c 1.65539,0 2.99739,-1.22685 2.99739,-2.74028 0,-1.51341 -1.342,-2.74029 -2.99739,-2.74029 -1.655411,0 -2.997389,1.22689 -2.997389,2.74029 0,1.51343 1.341978,2.74028 2.997389,2.74028 z" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           id="path481"
+           d="M 503.80507,343.94767 V 252.51178"
+           style="fill:none;stroke:#4a4a4a;stroke-width:1.06908774px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="stroke:#4a4a4a;stroke-width:1.00045407"
+           inkscape:connector-curvature="0"
+           d="m 500.81942,328.1051 2.99739,9.865 2.99738,-9.865"
+           id="path498" />
+        <path
+           style="fill:#4a4a4a;stroke:#4a4a4a;stroke-width:1.00045407"
+           inkscape:connector-curvature="0"
+           id="path500"
+           d="m 503.80507,343.94767 c 1.65542,0 2.99739,-1.22685 2.99739,-2.74028 0,-1.51343 -1.34197,-2.74028 -2.99739,-2.74028 -1.65542,0 -2.99739,1.22685 -2.99739,2.74028 0,1.51343 1.34197,2.74028 2.99739,2.74028 z" />
+        <g
+           transform="rotate(90,158.0351,538.0905)"
+           id="g506"
+           style="vector-effect:non-scaling-stroke;fill:none;fill-rule:evenodd">
+          <path
+             style="fill:none;stroke:#4a4a4a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 97.04157,406.94637 3.08349,-8.67572 3.79094,8.67572"
+             id="path502"
+             inkscape:connector-curvature="0" />
+          <path
+             d="m 100.12506,398.27065 c 1.65539,0 2.99739,-1.22685 2.99739,-2.74028 0,-1.51341 -1.342,-2.74029 -2.99739,-2.74029 -1.655411,0 -2.997389,1.22689 -2.997389,2.74029 0,1.51343 1.341978,2.74028 2.997389,2.74028 z"
+             id="path504"
+             inkscape:connector-curvature="0"
+             style="vector-effect:non-scaling-stroke;fill:#4a4a4a;fill-rule:evenodd;stroke:#4a4a4a;stroke-width:1.00045407" />
         </g>
       </g>
     </g>
